@@ -4,6 +4,122 @@
   
     
     <entry>
+      <title>Laravel快速入门(一)</title>
+      <link href="/2019/07/12/laravel-kuai-su-ru-men-yi/"/>
+      <url>/2019/07/12/laravel-kuai-su-ru-men-yi/</url>
+      
+        <content type="html"><![CDATA[<p>Laravel是一套简洁、优雅的PHP WEB开发框架（目前最流行的PHP框架，基于symfony开发）具有富于表达性且简洁的语法，Laravel是易于理解且强大的，它提供了强大的工具用于开发大型、健壮的应用，如：验证、路由、会话技术、缓存、数据迁移、单元测试等等常用工具和功能。<br><a href="https://laravel.com/" target="_blank" rel="noopener">Laravel官网</a><br><a href="http://laravelacademy.org/" target="_blank" rel="noopener">Laravel学院</a><br><a href="http://www.golaravel.com/" target="_blank" rel="noopener">Laravel中文文档</a><br><a href="https://laravel-china.org/" target="_blank" rel="noopener">Laravel中国</a><br><a href="https://laravel-china.org/topics/2530/the-highest-amount-of-downloads-of-the-100-laravel-extensions-recommended" target="_blank" rel="noopener">Laravel常见的类库(top100)</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> PHP </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 框架 </tag>
+            
+            <tag> Laravel </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>快速搭建LAMP环境</title>
+      <link href="/2018/04/12/kuai-su-da-jian-lamp-huan-jing/"/>
+      <url>/2018/04/12/kuai-su-da-jian-lamp-huan-jing/</url>
+      
+        <content type="html"><![CDATA[<h4 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h4><ul><li>一台装有Centos7的服务器<h4 id="安装PHP7"><a href="#安装PHP7" class="headerlink" title="安装PHP7"></a>安装PHP7</h4><pre><code>1.更换yum源rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpmrpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm2.安装PHP7yum install -y php70w3.安装PHP的常用扩展 yum install -y php70w-pecl-redis.x86_64 php70w-mysql.x86_64  php70w-mcrypt.x86_64 php70w-pdo.x86_64 php70w-soap.x86_64 php70w-devel.x86_64 php70w-bcmath.x86_64 php70w-gd.x86_64 php70w-opcache.x86_64</code></pre><h4 id="安装Apache"><a href="#安装Apache" class="headerlink" title="安装Apache"></a>安装Apache</h4><pre><code>yum install -y httpd</code></pre><h4 id="安装Mysql"><a href="#安装Mysql" class="headerlink" title="安装Mysql"></a>安装Mysql</h4><pre><code>wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpmrpm -ivh mysql-community-release-el7-5.noarch.rpmyum install -y mysql-server1.启动mysqlsystemctl restart mysqld.service2.登录数据库，修改密码mysql -urootSET PASSWORD FOR &#39;root&#39;@&#39;localhost&#39; = PASSWORD(&#39;你的密码&#39;);</code></pre><h4 id="设置开机自动启动"><a href="#设置开机自动启动" class="headerlink" title="设置开机自动启动"></a>设置开机自动启动</h4><pre><code>systemctl enable  httpd.service</code></pre><h4 id="启动-Apache"><a href="#启动-Apache" class="headerlink" title="启动 Apache"></a>启动 Apache</h4><pre><code>systemctl start  httpd.service</code></pre></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> PHP </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> CentOs </tag>
+            
+            <tag> Apache </tag>
+            
+            <tag> Mysql </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>快速搭建LNMP环境</title>
+      <link href="/2018/04/12/kuai-su-da-jian-lnmp-huan-jing/"/>
+      <url>/2018/04/12/kuai-su-da-jian-lnmp-huan-jing/</url>
+      
+        <content type="html"><![CDATA[<h4 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h4><ul><li>一台装有Centos7的服务器<h4 id="安装PHP7"><a href="#安装PHP7" class="headerlink" title="安装PHP7"></a>安装PHP7</h4><pre><code>1.更换yum源rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpmrpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm2.安装PHP7yum install -y php70w3.安装PHP的常用扩展 yum install -y php70w-pecl-redis.x86_64 php70w-mysql.x86_64 php70w-fpm.x86_64 php70w-mcrypt.x86_64 php70w-pdo.x86_64 php70w-soap.x86_64 php70w-devel.x86_64 php70w-bcmath.x86_64 php70w-gd.x86_64 php70w-opcache.x86_64</code></pre><h4 id="安装Nginx"><a href="#安装Nginx" class="headerlink" title="安装Nginx"></a>安装Nginx</h4><pre><code>yum install -y nginx</code></pre><h4 id="安装Mysql"><a href="#安装Mysql" class="headerlink" title="安装Mysql"></a>安装Mysql</h4><pre><code>wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpmrpm -ivh mysql-community-release-el7-5.noarch.rpmyum install -y mysql-server1.启动mysqlsystemctl restart mysqld.service2.登录数据库，修改密码mysql -urootSET PASSWORD FOR &#39;root&#39;@&#39;localhost&#39; = PASSWORD(&#39;你的密码&#39;);</code></pre><h4 id="设置开机自动启动"><a href="#设置开机自动启动" class="headerlink" title="设置开机自动启动"></a>设置开机自动启动</h4><pre><code>systemctl enable  nginx.servicesystemctl enable  php-fpm.service</code></pre><h4 id="启动-Nginx-PHP"><a href="#启动-Nginx-PHP" class="headerlink" title="启动 Nginx,PHP"></a>启动 Nginx,PHP</h4><pre><code>systemctl start  nginx.servicesystemctl start  php-fpm.service</code></pre></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> PHP </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> CentOs </tag>
+            
+            <tag> Mysql </tag>
+            
+            <tag> Nginx </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>git常用指令</title>
+      <link href="/2017/10/20/git-chang-yong-zhi-ling/"/>
+      <url>/2017/10/20/git-chang-yong-zhi-ling/</url>
+      
+        <content type="html"><![CDATA[<h3 id="Git-全局设置"><a href="#Git-全局设置" class="headerlink" title="Git 全局设置"></a>Git 全局设置</h3><pre><code>git config --global user.name &quot;your name&quot;git config --global user.email &quot;your Email&quot;</code></pre><h3 id="克隆线上git仓库"><a href="#克隆线上git仓库" class="headerlink" title="克隆线上git仓库"></a>克隆线上git仓库</h3><pre><code>git clone 项目git仓库地址</code></pre><h3 id="本地新文件夹与线上git仓库关联"><a href="#本地新文件夹与线上git仓库关联" class="headerlink" title="本地新文件夹与线上git仓库关联"></a>本地新文件夹与线上git仓库关联</h3><pre><code>cd your dirgit initgit remote add origin 项目git仓库地址git add .git commit -m &quot;Initial commit&quot;git push -u origin master</code></pre><h3 id="已存在的-Git-版本库"><a href="#已存在的-Git-版本库" class="headerlink" title="已存在的 Git 版本库"></a>已存在的 Git 版本库</h3><pre><code>cd your git dirgit remote rename origin old-origingit remote add origin 项目git仓库地址git push -u origin --allgit push -u origin --tags关联本地与远程分支git branch --set-upstream-to origin/devtest devtest</code></pre><h3 id="git初始化"><a href="#git初始化" class="headerlink" title="git初始化"></a>git初始化</h3><pre><code>git init</code></pre><h3 id="git下载远程git仓库代码："><a href="#git下载远程git仓库代码：" class="headerlink" title="git下载远程git仓库代码："></a>git下载远程git仓库代码：</h3><pre><code>git clone 远程git仓库地址</code></pre><h3 id="git查看当前分支修改内容状态："><a href="#git查看当前分支修改内容状态：" class="headerlink" title="git查看当前分支修改内容状态："></a>git查看当前分支修改内容状态：</h3><pre><code>git status</code></pre><h3 id="git查看分支："><a href="#git查看分支：" class="headerlink" title="git查看分支："></a>git查看分支：</h3><pre><code>查看所有分支列表（本地 和 远程）git branch -a查看本地分支，*标记的代表当前分支git branch3 查看远程版本库分支git branch -r</code></pre><h3 id="git重命名本地-远程分支："><a href="#git重命名本地-远程分支：" class="headerlink" title="git重命名本地/远程分支："></a>git重命名本地/远程分支：</h3><pre><code>重命名本地分支（不管是否在当前分支，都可以修改）git branch -m &lt;old_branch&gt; &lt;new_branch&gt;重命名远程分支先修改本地分支名git branch -m &lt;old_branch&gt; &lt;new_branch&gt;再删除要修改的远程分支名git push origin --delete &lt;old_branch&gt;最后将改名后的分支push到远程git push origin &lt;new_branch&gt;</code></pre><h3 id="git更新内容放入暂存区："><a href="#git更新内容放入暂存区：" class="headerlink" title="git更新内容放入暂存区："></a>git更新内容放入暂存区：</h3><pre><code>单个文件放入暂存区git add &lt;filename&gt;所有文件放入暂存区git add .</code></pre><h3 id="git提交暂存区的内容："><a href="#git提交暂存区的内容：" class="headerlink" title="git提交暂存区的内容："></a>git提交暂存区的内容：</h3><pre><code>git commit -m&quot; 对本次提交的描述 &quot;</code></pre><h3 id="git拉取远程代码："><a href="#git拉取远程代码：" class="headerlink" title="git拉取远程代码："></a>git拉取远程代码：</h3><pre><code>git pull origin &lt;origin_branch&gt;拉取远程所有分支代码git pull</code></pre><h3 id="git推送到远程代码："><a href="#git推送到远程代码：" class="headerlink" title="git推送到远程代码："></a>git推送到远程代码：</h3><pre><code>git push origin &lt;origin_branch&gt;</code></pre><h3 id="git切换分支（commit之后方可切换分支）"><a href="#git切换分支（commit之后方可切换分支）" class="headerlink" title="git切换分支（commit之后方可切换分支）"></a>git切换分支（commit之后方可切换分支）</h3><pre><code>切换已经存在的分支git checkout &lt;branch_name&gt;切换不存在的分支（此命令会新建新分支并切换到新分支）git checkout -b &lt;new_branch&gt;</code></pre><h3 id="git放弃修改："><a href="#git放弃修改：" class="headerlink" title="git放弃修改："></a>git放弃修改：</h3><pre><code>放弃单个文件的修改，即删除修改（注意：该文件没有暂存或者提交改动，已经暂存或者提交改动的不受影响）git checkout -- &lt;filename&gt;放弃当前目录下的修改，即删除修改git checkout .</code></pre><h3 id="git本地分支推送远程："><a href="#git本地分支推送远程：" class="headerlink" title="git本地分支推送远程："></a>git本地分支推送远程：</h3><pre><code>拉取远程最新代码git pull新建本地分支git checkout -b 本地分支名推送到远程分支上git push origin 本地分支名：远程分支名</code></pre><h3 id="git删除本地分支："><a href="#git删除本地分支：" class="headerlink" title="git删除本地分支："></a>git删除本地分支：</h3><pre><code>删除本地分支 （需要先checkuout到本地别的分支上，再进行删除）git branch -d &lt;branch_name&gt;如果有未merge的提交，那么删除分支失败 ，此时可以进行强制删除分支git branch -D &lt;branch_name&gt;</code></pre><h3 id="git删除远程分支："><a href="#git删除远程分支：" class="headerlink" title="git删除远程分支："></a>git删除远程分支：</h3><pre><code>方法一：git push origin --delete &lt;origin_branch&gt;方法二：git push origin :&lt;origin_branch&gt;</code></pre><h3 id="git查看日志（日志即分支的历史合并）："><a href="#git查看日志（日志即分支的历史合并）：" class="headerlink" title="git查看日志（日志即分支的历史合并）："></a>git查看日志（日志即分支的历史合并）：</h3><pre><code>会输出所有的日志（commit id，commit author，commit date，commit name），如果日志特别多的话，在git bash中，按向下键来查看更多，按q键退出查看日志git log--oneline 参数可以将每条日志的输出为一行（commit id 前7位，commit name），如果日志比较多的话，用这个参数能够使结果看起来比较醒目git log --oneline-[length]  参数用于指定显示多少条日志（例：git log -1，显示一条）git log -[length]--name-status  参数会带出每次提交对应的文件改动git log --name-status可以筛选出 yourname 用户提交的所有日志git log --author yourname参数用来指定跳过前几条日志（git log --skip=1）git log --skip=[skip]-p 参数输出的信息会更多，用来显示提交的改动记录，相当于多次使用 git show [commit_id] 的结果；（git log -1 -p：显示一条）git log -p</code></pre><h3 id="git撤销提交："><a href="#git撤销提交：" class="headerlink" title="git撤销提交："></a>git撤销提交：</h3><pre><code>退回到某个版本，只回退了commit的信息（退回到暂存区 commit，还可以继续修改提交）git reset --soft &lt;commit id&gt;撤销最近一次提交git revert HEADreset 撤销  彻底回退到某个版本（撤销的内容（即被撤销的commit）会被冲掉）git reset --hard&lt;commit id&gt;revert 撤销 （比如：fa042ce57ebbe5bb9c8db709f719cec2c58ee7ff）撤销指定的版本，撤销也会作为一次提交进行保存git revert commit注意：reset 和 revert 的区别：revert 是用一次新的 commit 来回滚之前的 commit，reset 是直接删除指定的 commit</code></pre><p><a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">史上最浅显易懂的Git教程</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 版本控制工具 </tag>
+            
+            <tag> Git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>史上最全的Webstorm快捷键及技巧</title>
       <link href="/2017/10/17/shi-shang-zui-quan-de-webstorm-kuai-jie-jian-ji-ji-qiao/"/>
       <url>/2017/10/17/shi-shang-zui-quan-de-webstorm-kuai-jie-jian-ji-ji-qiao/</url>
@@ -23,33 +139,6 @@
             <tag> 代码编辑器 </tag>
             
             <tag> Webstorm </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Mysql优化</title>
-      <link href="/2017/10/15/mysql-you-hua/"/>
-      <url>/2017/10/15/mysql-you-hua/</url>
-      
-        <content type="html"><![CDATA[<p>今天，数据库的操作越来越成为整个应用的性能瓶颈了，这点对于Web应用尤其明显。关于数据库的性能，这并不只是DBA才需要担心的事，而这更是我们程序员需要去关注的事情。当我们去设计数据库表结构，对操作数据库时(尤其是查表时的SQL语句)，我们都需要注意数据操作的性能。这里，我们不会讲过 多的SQL语句的优化，而只是针对MySQL这一Web应用最多的数据库。希望下面的这些优化技巧对你有用。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Mysql </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 数据库 </tag>
-            
-            <tag> Mysql </tag>
             
         </tags>
       
