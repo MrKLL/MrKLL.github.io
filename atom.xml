@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.klinlin.com/"/>
-  <updated>2019-07-15T16:08:38.817Z</updated>
+  <updated>2019-07-12T09:11:21.256Z</updated>
   <id>https://www.klinlin.com/</id>
   
   <author>
@@ -15,34 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Laravel快速入门(一)</title>
-    <link href="https://www.klinlin.com/2019/07/12/laravel-kuai-su-ru-men-yi/"/>
-    <id>https://www.klinlin.com/2019/07/12/laravel-kuai-su-ru-men-yi/</id>
-    <published>2019-07-12T09:17:30.000Z</published>
-    <updated>2019-07-15T16:08:38.817Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Laravel是一套简洁、优雅的PHP
-        
-      
-    
-    </summary>
-    
-      <category term="PHP" scheme="https://www.klinlin.com/categories/PHP/"/>
-    
-    
-      <category term="框架" scheme="https://www.klinlin.com/tags/%E6%A1%86%E6%9E%B6/"/>
-    
-      <category term="Laravel" scheme="https://www.klinlin.com/tags/Laravel/"/>
-    
-  </entry>
   
   <entry>
     <title>快速搭建LAMP环境</title>
@@ -71,9 +43,9 @@
     
       <category term="CentOs" scheme="https://www.klinlin.com/tags/CentOs/"/>
     
-      <category term="Mysql" scheme="https://www.klinlin.com/tags/Mysql/"/>
-    
       <category term="Apache" scheme="https://www.klinlin.com/tags/Apache/"/>
+    
+      <category term="Mysql" scheme="https://www.klinlin.com/tags/Mysql/"/>
     
   </entry>
   
@@ -104,9 +76,37 @@
     
       <category term="CentOs" scheme="https://www.klinlin.com/tags/CentOs/"/>
     
+      <category term="Mysql" scheme="https://www.klinlin.com/tags/Mysql/"/>
+    
       <category term="Nginx" scheme="https://www.klinlin.com/tags/Nginx/"/>
     
-      <category term="Mysql" scheme="https://www.klinlin.com/tags/Mysql/"/>
+  </entry>
+  
+  <entry>
+    <title>Laravel快速入门(一)</title>
+    <link href="https://www.klinlin.com/2018/01/12/laravel-kuai-su-ru-men-yi/"/>
+    <id>https://www.klinlin.com/2018/01/12/laravel-kuai-su-ru-men-yi/</id>
+    <published>2018-01-12T09:17:30.000Z</published>
+    <updated>2019-07-19T08:31:04.387Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;一、Laravel概述&quot;&gt;&lt;a href=&quot;#一、Laravel概述&quot; class=&quot;headerlink&quot; title=&quot;一、Laravel概述&quot;&gt;&lt;/a&gt;一、Laravel概述&lt;/h3&gt;&lt;h4 id=&quot;1-1-Laravel框架简介&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="PHP" scheme="https://www.klinlin.com/categories/PHP/"/>
+    
+    
+      <category term="框架" scheme="https://www.klinlin.com/tags/%E6%A1%86%E6%9E%B6/"/>
+    
+      <category term="Laravel" scheme="https://www.klinlin.com/tags/Laravel/"/>
     
   </entry>
   
