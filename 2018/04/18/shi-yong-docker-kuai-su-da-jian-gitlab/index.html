@@ -4,11 +4,8 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="快速搭建LNMP环境, MrKLL">
-    <meta name="description" content="准备工作
-一台装有Centos7的服务器安装PHP71.更换yum源
-rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-rpm -">
+    <meta name="keywords" content="使用docker快速搭建gitlab, MrKLL">
+    <meta name="description" content="   如今最常用的代码版本控制工具当属git了，相对于命令行操作，我们更加需要一个web可视化界面来更好的进行管控我们的项目，GitLab 是一个用于仓库管理系统的开源项目，使用Git作为代码管理工具，使用它可以帮助我们更好的进行团队协作开">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +13,7 @@ rpm -">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>快速搭建LNMP环境 | MrKLL</title>
+    <title>使用docker快速搭建gitlab | MrKLL</title>
     <link rel="icon" type="image/jpeg" href="http://res.jxzl.cc/medias/avatar.jpg">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -259,13 +256,13 @@ rpm -">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('http://res.jxzl.cc/medias/featureimages/37.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('http://res.jxzl.cc/medias/featureimages/32.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        快速搭建LNMP环境
+                        使用docker快速搭建gitlab
                     </div>
                 </div>
             </div>
@@ -376,20 +373,16 @@ rpm -">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Linux/" target="_blank">
-                                <span class="chip bg-color">Linux</span>
+                            <a href="/tags/docker/" target="_blank">
+                                <span class="chip bg-color">docker</span>
                             </a>
                         
-                            <a href="/tags/CentOs/" target="_blank">
-                                <span class="chip bg-color">CentOs</span>
+                            <a href="/tags/git/" target="_blank">
+                                <span class="chip bg-color">git</span>
                             </a>
                         
-                            <a href="/tags/Mysql/" target="_blank">
-                                <span class="chip bg-color">Mysql</span>
-                            </a>
-                        
-                            <a href="/tags/Nginx/" target="_blank">
-                                <span class="chip bg-color">Nginx</span>
+                            <a href="/tags/gitlab/" target="_blank">
+                                <span class="chip bg-color">gitlab</span>
                             </a>
                         
                     </div>
@@ -400,8 +393,8 @@ rpm -">
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/PHP/" class="post-category" target="_blank">
-                                PHP
+                            <a href="/categories/git/" class="post-category" target="_blank">
+                                git
                             </a>
                         
                     </div>
@@ -412,21 +405,21 @@ rpm -">
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2018-04-12
+                    2018-04-18
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        194
+                        593
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        1 分
+                        2 分
                     </div>
                     
                 
@@ -442,29 +435,40 @@ rpm -">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h4><ul>
-<li>一台装有Centos7的服务器<h4 id="安装PHP7"><a href="#安装PHP7" class="headerlink" title="安装PHP7"></a>安装PHP7</h4><pre><code>1.更换yum源
-rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
-2.安装PHP7
-yum install -y php70w
-3.安装PHP的常用扩展 
-yum install -y php70w-pecl-redis.x86_64 php70w-mysql.x86_64 php70w-fpm.x86_64 php70w-mcrypt.x86_64 php70w-pdo.x86_64 php70w-soap.x86_64 php70w-devel.x86_64 php70w-bcmath.x86_64 php70w-gd.x86_64 php70w-opcache.x86_64
-</code></pre><h4 id="安装Nginx"><a href="#安装Nginx" class="headerlink" title="安装Nginx"></a>安装Nginx</h4><pre><code>yum install -y nginx
-</code></pre><h4 id="安装Mysql"><a href="#安装Mysql" class="headerlink" title="安装Mysql"></a>安装Mysql</h4><pre><code>wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
-rpm -ivh mysql-community-release-el7-5.noarch.rpm
-yum install -y mysql-server
-1.启动mysql
-systemctl restart mysqld.service
-2.登录数据库，修改密码
-mysql -uroot
-SET PASSWORD FOR &#39;root&#39;@&#39;localhost&#39; = PASSWORD(&#39;你的密码&#39;);
-</code></pre><h4 id="设置开机自动启动"><a href="#设置开机自动启动" class="headerlink" title="设置开机自动启动"></a>设置开机自动启动</h4><pre><code>systemctl enable  nginx.service
-systemctl enable  php-fpm.service
-</code></pre><h4 id="启动-Nginx-PHP"><a href="#启动-Nginx-PHP" class="headerlink" title="启动 Nginx,PHP"></a>启动 Nginx,PHP</h4><pre><code>systemctl start  nginx.service
-systemctl start  php-fpm.service
-</code></pre></li>
-</ul>
+                <p>   如今最常用的代码版本控制工具当属git了，相对于命令行操作，我们更加需要一个web可视化界面来更好的进行管控我们的项目，GitLab 是一个用于仓库管理系统的开源项目，使用Git作为代码管理工具，使用它可以帮助我们更好的进行团队协作开发项目，下面我们来使用docker快速搭建一个私有的git服务器吧。</p>
+<h4 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h4><pre><code>装有CentOs7的服务器
+</code></pre><h4 id="一、下载docker"><a href="#一、下载docker" class="headerlink" title="一、下载docker"></a>一、下载docker</h4><pre><code>#使用如下指令下载docker
+yum -y install docker
+</code></pre><p><img src="http://res.jxzl.cc/medias/article/shi-yong-docker-kuai-su-da-jian-gitlab/1.png" alt="下载docker"></p>
+<p><img src="http://res.jxzl.cc/medias/article/shi-yong-docker-kuai-su-da-jian-gitlab/2.png" alt="下载docker成功"></p>
+<h4 id="二、运行docker"><a href="#二、运行docker" class="headerlink" title="二、运行docker"></a>二、运行docker</h4><pre><code>#使用如下指令运行docker
+systemctl start docker
+</code></pre><h4 id="三、搜索gitlab镜像"><a href="#三、搜索gitlab镜像" class="headerlink" title="三、搜索gitlab镜像"></a>三、搜索gitlab镜像</h4><pre><code>#搜索gitlab中文社区版镜像
+docker search gitlab
+</code></pre><p><img src="http://res.jxzl.cc/medias/article/shi-yong-docker-kuai-su-da-jian-gitlab/3.png" alt="搜索gitlab镜像"></p>
+<h4 id="四、下载gitlab中文镜像"><a href="#四、下载gitlab中文镜像" class="headerlink" title="四、下载gitlab中文镜像"></a>四、下载gitlab中文镜像</h4><pre><code>#输入如下指令下载gitlab中文镜像
+docker pull docker.io/twang2218/gitlab-ce-zh
+</code></pre><p><img src="http://res.jxzl.cc/medias/article/shi-yong-docker-kuai-su-da-jian-gitlab/4.png" alt="下载gitlab中文镜像"><br><img src="http://res.jxzl.cc/medias/article/shi-yong-docker-kuai-su-da-jian-gitlab/5.png" alt="下载镜像完成"></p>
+<h4 id="五、配置并运行镜像"><a href="#五、配置并运行镜像" class="headerlink" title="五、配置并运行镜像"></a>五、配置并运行镜像</h4><pre><code># 输入指令
+docker run -d  -p 443:443 -p 80:80 -p 222:22 --name gitlab --restart always -v /home/gitlab/config:/etc/gitlab -v /home/gitlab/logs:/var/log/gitlab -v /home/gitlab/data:/var/opt/gitlab gitlab/gitlab-ce
+# -d:后台运行
+# -p:docker内部端口映射服务器端口
+# --name: docker容器命名，方便对该容器进行管理和操作
+# --restart always:让该容器跟随docker重启而重启
+# -v:将容器内配置文件、日志文件、数据文件挂载到外部文件夹中，方便操作
+</code></pre><p><img src="http://res.jxzl.cc/medias/article/shi-yong-docker-kuai-su-da-jian-gitlab/6.png" alt="启动gitlab容器成功"></p>
+<h4 id="五、修改gitlab配置信息"><a href="#五、修改gitlab配置信息" class="headerlink" title="五、修改gitlab配置信息"></a>五、修改gitlab配置信息</h4><p>至此，gitlab已经可以运行使用了，但是在gitlab上创建项目的时候，生成的项目访问Url是按照容器id来生成的，但是作为git服务器，我们的项目需要一个固定的访问Url,所以我们需要对gitlab的配置文件gitlab.rb(完整路径：/home/gitlab/config/gitlab.rb)进行一些修改:</p>
+<pre><code># 输入指令
+vi /etc/gitlab
+# 修改http访问地址(支持ip地址和域名)，端口号不写默认为80
+external_url &#39;http://你的ip地址&#39;或&#39;http://你的域名&#39;
+# 修改ssh协议所使用的访问地址和端口
+gitlab_rails[&#39;gitlab_ssh_host&#39;] = &#39;你的ip地址&#39;或&#39;你的域名&#39;
+gitlab_rails[&#39;gitlab_shell_ssh_port&#39;] = 222 # 此端口指的是docker内部端口,在执行run指令的时候，我们将容器的222端口映射到服务器的22端口，所以填写222
+</code></pre><p><img src="http://res.jxzl.cc/medias/article/shi-yong-docker-kuai-su-da-jian-gitlab/7.png" alt="修改external_url配置项"><br><img src="http://res.jxzl.cc/medias/article/shi-yong-docker-kuai-su-da-jian-gitlab/8.png" alt="修改gitlab_ssh_host配置项"><br><img src="http://res.jxzl.cc/medias/article/shi-yong-docker-kuai-su-da-jian-gitlab/9.png" alt="修改gitlab_shell_ssh_port配置项"></p>
+<h4 id="六、重启gitlab容器"><a href="#六、重启gitlab容器" class="headerlink" title="六、重启gitlab容器"></a>六、重启gitlab容器</h4><pre><code>#输入指令
+docker restart gitlab
+</code></pre><p><img src="http://res.jxzl.cc/medias/article/shi-yong-docker-kuai-su-da-jian-gitlab/10.png" alt="重启gitlab容器成功"></p>
 
             </div>
             <hr>
@@ -620,9 +624,9 @@ systemctl start  php-fpm.service
             </div>
             <br>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">
-                    《快速搭建LNMP环境》
+                    《使用docker快速搭建gitlab》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2018/04/12/kuai-su-da-jian-lnmp-huan-jing/" property="cc:attributionName" rel="cc:attributionURL">
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2018/04/18/shi-yong-docker-kuai-su-da-jian-gitlab/" property="cc:attributionName" rel="cc:attributionURL">
                 MrKLL
             </a> 采用
             <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
@@ -685,7 +689,65 @@ systemctl start  php-fpm.service
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2018/04/18/shi-yong-docker-kuai-su-da-jian-gitlab/">
+                    <div class="card-image">
+                        
+                        <img src="http://res.jxzl.cc/medias/featureimages/32.jpg" class="responsive-img" alt="使用docker快速搭建gitlab">
+                        
+                        <span class="card-title">使用docker快速搭建gitlab</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            GitLab 是一个用于仓库管理系统的开源项目，使用Git作为代码管理工具，并在此基础上搭建起来的web服务。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-04-18
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/git/" class="post-category" target="_blank">
+                                    git
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/docker/" target="_blank">
+                        <span class="chip bg-color">docker</span>
+                    </a>
+                    
+                    <a href="/tags/git/" target="_blank">
+                        <span class="chip bg-color">git</span>
+                    </a>
+                    
+                    <a href="/tags/gitlab/" target="_blank">
+                        <span class="chip bg-color">gitlab</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2018/04/12/kuai-su-da-jian-lamp-huan-jing/">
                     <div class="card-image">
@@ -702,9 +764,9 @@ systemctl start  php-fpm.service
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-04-12
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-04-12
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -734,58 +796,6 @@ systemctl start  php-fpm.service
                     
                     <a href="/tags/Mysql/" target="_blank">
                         <span class="chip bg-color">Mysql</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2018/01/12/laravel-kuai-su-ru-men-yi/">
-                    <div class="card-image">
-                        
-                        <img src="http://res.jxzl.cc/medias/featureimages/28.jpg" class="responsive-img" alt="Laravel快速入门(一)">
-                        
-                        <span class="card-title">Laravel快速入门(一)</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            Laravel 是优雅的 PHP Web 开发框架。具有高效、简洁、富于表达力等优点。采用 MVC 设计，是崇尚开发效率的全栈框架，是最受关注的 PHP 框架。
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-01-12
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/PHP/" class="post-category" target="_blank">
-                                    PHP
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/框架/" target="_blank">
-                        <span class="chip bg-color">框架</span>
-                    </a>
-                    
-                    <a href="/tags/Laravel/" target="_blank">
-                        <span class="chip bg-color">Laravel</span>
                     </a>
                     
                 </div>

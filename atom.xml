@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.klinlin.com/"/>
-  <updated>2019-07-12T09:11:21.256Z</updated>
+  <updated>2019-08-06T23:07:22.095Z</updated>
   <id>https://www.klinlin.com/</id>
   
   <author>
@@ -17,11 +17,41 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>使用docker快速搭建gitlab</title>
+    <link href="https://www.klinlin.com/2018/04/18/shi-yong-docker-kuai-su-da-jian-gitlab/"/>
+    <id>https://www.klinlin.com/2018/04/18/shi-yong-docker-kuai-su-da-jian-gitlab/</id>
+    <published>2018-04-18T08:30:38.000Z</published>
+    <updated>2019-08-06T23:07:22.095Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;   如今最常用的代码版本控制工具当属git了，相对于命令行操作，我们更加需要一个web可视化界面来更好的进行管控我们的项目，GitLab
+        
+      
+    
+    </summary>
+    
+      <category term="git" scheme="https://www.klinlin.com/categories/git/"/>
+    
+    
+      <category term="docker" scheme="https://www.klinlin.com/tags/docker/"/>
+    
+      <category term="git" scheme="https://www.klinlin.com/tags/git/"/>
+    
+      <category term="gitlab" scheme="https://www.klinlin.com/tags/gitlab/"/>
+    
+  </entry>
+  
+  <entry>
     <title>快速搭建LAMP环境</title>
     <link href="https://www.klinlin.com/2018/04/12/kuai-su-da-jian-lamp-huan-jing/"/>
     <id>https://www.klinlin.com/2018/04/12/kuai-su-da-jian-lamp-huan-jing/</id>
     <published>2018-04-12T09:10:00.000Z</published>
-    <updated>2019-07-12T09:11:21.256Z</updated>
+    <updated>2019-08-05T03:24:18.021Z</updated>
     
     <summary type="html">
     
@@ -54,7 +84,7 @@
     <link href="https://www.klinlin.com/2018/04/12/kuai-su-da-jian-lnmp-huan-jing/"/>
     <id>https://www.klinlin.com/2018/04/12/kuai-su-da-jian-lnmp-huan-jing/</id>
     <published>2018-04-12T08:07:48.000Z</published>
-    <updated>2019-07-14T08:09:18.493Z</updated>
+    <updated>2019-08-05T03:24:18.146Z</updated>
     
     <summary type="html">
     
@@ -87,7 +117,7 @@
     <link href="https://www.klinlin.com/2018/01/12/laravel-kuai-su-ru-men-yi/"/>
     <id>https://www.klinlin.com/2018/01/12/laravel-kuai-su-ru-men-yi/</id>
     <published>2018-01-12T09:17:30.000Z</published>
-    <updated>2019-07-19T08:31:04.387Z</updated>
+    <updated>2019-08-06T22:24:59.887Z</updated>
     
     <summary type="html">
     
@@ -115,7 +145,7 @@
     <link href="https://www.klinlin.com/2017/10/20/git-chang-yong-zhi-ling/"/>
     <id>https://www.klinlin.com/2017/10/20/git-chang-yong-zhi-ling/</id>
     <published>2017-10-20T08:01:49.000Z</published>
-    <updated>2019-07-12T02:05:49.194Z</updated>
+    <updated>2019-08-05T03:24:18.111Z</updated>
     
     <summary type="html">
     
@@ -143,7 +173,7 @@
     <link href="https://www.klinlin.com/2017/10/17/shi-shang-zui-quan-de-webstorm-kuai-jie-jian-ji-ji-qiao/"/>
     <id>https://www.klinlin.com/2017/10/17/shi-shang-zui-quan-de-webstorm-kuai-jie-jian-ji-ji-qiao/</id>
     <published>2017-10-17T09:03:19.000Z</published>
-    <updated>2019-07-09T09:18:24.158Z</updated>
+    <updated>2019-08-06T22:25:16.662Z</updated>
     
     <summary type="html">
     
