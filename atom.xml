@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.klinlin.com/"/>
-  <updated>2019-08-06T23:07:22.095Z</updated>
+  <updated>2019-08-09T08:09:15.133Z</updated>
   <id>https://www.klinlin.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.klinlin.com/2018/04/18/shi-yong-docker-kuai-su-da-jian-gitlab/"/>
     <id>https://www.klinlin.com/2018/04/18/shi-yong-docker-kuai-su-da-jian-gitlab/</id>
     <published>2018-04-18T08:30:38.000Z</published>
-    <updated>2019-08-06T23:07:22.095Z</updated>
+    <updated>2019-08-09T08:09:15.133Z</updated>
     
     <summary type="html">
     
@@ -35,12 +35,12 @@
     
     </summary>
     
-      <category term="git" scheme="https://www.klinlin.com/categories/git/"/>
+      <category term="Git" scheme="https://www.klinlin.com/categories/Git/"/>
     
     
       <category term="docker" scheme="https://www.klinlin.com/tags/docker/"/>
     
-      <category term="git" scheme="https://www.klinlin.com/tags/git/"/>
+      <category term="Git" scheme="https://www.klinlin.com/tags/Git/"/>
     
       <category term="gitlab" scheme="https://www.klinlin.com/tags/gitlab/"/>
     
@@ -73,9 +73,9 @@
     
       <category term="CentOs" scheme="https://www.klinlin.com/tags/CentOs/"/>
     
-      <category term="Apache" scheme="https://www.klinlin.com/tags/Apache/"/>
-    
       <category term="Mysql" scheme="https://www.klinlin.com/tags/Mysql/"/>
+    
+      <category term="Apache" scheme="https://www.klinlin.com/tags/Apache/"/>
     
   </entry>
   
@@ -106,9 +106,9 @@
     
       <category term="CentOs" scheme="https://www.klinlin.com/tags/CentOs/"/>
     
-      <category term="Mysql" scheme="https://www.klinlin.com/tags/Mysql/"/>
-    
       <category term="Nginx" scheme="https://www.klinlin.com/tags/Nginx/"/>
+    
+      <category term="Mysql" scheme="https://www.klinlin.com/tags/Mysql/"/>
     
   </entry>
   
@@ -162,9 +162,9 @@
       <category term="Git" scheme="https://www.klinlin.com/categories/Git/"/>
     
     
-      <category term="版本控制工具" scheme="https://www.klinlin.com/tags/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E5%B7%A5%E5%85%B7/"/>
-    
       <category term="Git" scheme="https://www.klinlin.com/tags/Git/"/>
+    
+      <category term="版本控制工具" scheme="https://www.klinlin.com/tags/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   

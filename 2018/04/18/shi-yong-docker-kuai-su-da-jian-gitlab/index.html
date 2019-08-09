@@ -377,8 +377,8 @@
                                 <span class="chip bg-color">docker</span>
                             </a>
                         
-                            <a href="/tags/git/" target="_blank">
-                                <span class="chip bg-color">git</span>
+                            <a href="/tags/Git/" target="_blank">
+                                <span class="chip bg-color">Git</span>
                             </a>
                         
                             <a href="/tags/gitlab/" target="_blank">
@@ -393,8 +393,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/git/" class="post-category" target="_blank">
-                                git
+                            <a href="/categories/Git/" class="post-category" target="_blank">
+                                Git
                             </a>
                         
                     </div>
@@ -412,14 +412,14 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        593
+                        927
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        2 分
+                        3 分
                     </div>
                     
                 
@@ -447,28 +447,42 @@ systemctl start docker
 docker search gitlab
 </code></pre><p><img src="http://res.jxzl.cc/medias/article/shi-yong-docker-kuai-su-da-jian-gitlab/3.png" alt="搜索gitlab镜像"></p>
 <h4 id="四、下载gitlab中文镜像"><a href="#四、下载gitlab中文镜像" class="headerlink" title="四、下载gitlab中文镜像"></a>四、下载gitlab中文镜像</h4><pre><code>#输入如下指令下载gitlab中文镜像
-docker pull docker.io/twang2218/gitlab-ce-zh
+docker pull twang2218/gitlab-ce-zh
 </code></pre><p><img src="http://res.jxzl.cc/medias/article/shi-yong-docker-kuai-su-da-jian-gitlab/4.png" alt="下载gitlab中文镜像"><br><img src="http://res.jxzl.cc/medias/article/shi-yong-docker-kuai-su-da-jian-gitlab/5.png" alt="下载镜像完成"></p>
 <h4 id="五、配置并运行镜像"><a href="#五、配置并运行镜像" class="headerlink" title="五、配置并运行镜像"></a>五、配置并运行镜像</h4><pre><code># 输入指令
-docker run -d  -p 443:443 -p 80:80 -p 222:22 --name gitlab --restart always -v /home/gitlab/config:/etc/gitlab -v /home/gitlab/logs:/var/log/gitlab -v /home/gitlab/data:/var/opt/gitlab gitlab/gitlab-ce
+docker run -d  -p 443:443 -p 80:80 -p 22:22 --name gitlab --restart always -v /home/gitlab/config:/etc/gitlab -v /home/gitlab/logs:/var/log/gitlab -v /home/gitlab/data:/var/opt/gitlab twang2218/gitlab-ce-zh
 # -d:后台运行
-# -p:docker内部端口映射服务器端口
+# -p:docker 服务器端口映射容器内部端口
 # --name: docker容器命名，方便对该容器进行管理和操作
 # --restart always:让该容器跟随docker重启而重启
 # -v:将容器内配置文件、日志文件、数据文件挂载到外部文件夹中，方便操作
 </code></pre><p><img src="http://res.jxzl.cc/medias/article/shi-yong-docker-kuai-su-da-jian-gitlab/6.png" alt="启动gitlab容器成功"></p>
-<h4 id="五、修改gitlab配置信息"><a href="#五、修改gitlab配置信息" class="headerlink" title="五、修改gitlab配置信息"></a>五、修改gitlab配置信息</h4><p>至此，gitlab已经可以运行使用了，但是在gitlab上创建项目的时候，生成的项目访问Url是按照容器id来生成的，但是作为git服务器，我们的项目需要一个固定的访问Url,所以我们需要对gitlab的配置文件gitlab.rb(完整路径：/home/gitlab/config/gitlab.rb)进行一些修改:</p>
+<h4 id="六、修改gitlab配置信息"><a href="#六、修改gitlab配置信息" class="headerlink" title="六、修改gitlab配置信息"></a>六、修改gitlab配置信息</h4><p>至此，gitlab已经可以运行使用了，但是在gitlab上创建项目的时候，生成的项目访问Url是按照容器id来生成的，但是作为git服务器，我们的项目需要一个固定的访问Url,所以我们需要对gitlab的配置文件gitlab.rb(完整路径：/home/gitlab/config/gitlab.rb)进行一些修改:</p>
 <pre><code># 输入指令
-vi /etc/gitlab
+vi /home/gitlab/config/gitlab.rb
 # 修改http访问地址(支持ip地址和域名)，端口号不写默认为80
 external_url &#39;http://你的ip地址&#39;或&#39;http://你的域名&#39;
 # 修改ssh协议所使用的访问地址和端口
 gitlab_rails[&#39;gitlab_ssh_host&#39;] = &#39;你的ip地址&#39;或&#39;你的域名&#39;
-gitlab_rails[&#39;gitlab_shell_ssh_port&#39;] = 222 # 此端口指的是docker内部端口,在执行run指令的时候，我们将容器的222端口映射到服务器的22端口，所以填写222
+gitlab_rails[&#39;gitlab_shell_ssh_port&#39;] = 22 # 此端口指的是docker内部端口,在执行run指令的时候，我们将服务器的22端口映射到容器的22端口，所以填写22
 </code></pre><p><img src="http://res.jxzl.cc/medias/article/shi-yong-docker-kuai-su-da-jian-gitlab/7.png" alt="修改external_url配置项"><br><img src="http://res.jxzl.cc/medias/article/shi-yong-docker-kuai-su-da-jian-gitlab/8.png" alt="修改gitlab_ssh_host配置项"><br><img src="http://res.jxzl.cc/medias/article/shi-yong-docker-kuai-su-da-jian-gitlab/9.png" alt="修改gitlab_shell_ssh_port配置项"></p>
-<h4 id="六、重启gitlab容器"><a href="#六、重启gitlab容器" class="headerlink" title="六、重启gitlab容器"></a>六、重启gitlab容器</h4><pre><code>#输入指令
+<h4 id="七、重启gitlab容器"><a href="#七、重启gitlab容器" class="headerlink" title="七、重启gitlab容器"></a>七、重启gitlab容器</h4><pre><code>#输入指令
 docker restart gitlab
 </code></pre><p><img src="http://res.jxzl.cc/medias/article/shi-yong-docker-kuai-su-da-jian-gitlab/10.png" alt="重启gitlab容器成功"></p>
+<h4 id="八、注意事项"><a href="#八、注意事项" class="headerlink" title="八、注意事项"></a>八、注意事项</h4><ol>
+<li>我们在运行gitlab容器的时候，使用容器的222端口映射服务器的22端口，而服务器上SSH服务默认端口也是22，这样会产生端口冲突，所以需要修改两者之一的端口号：<br> 1.1 修改服务器的SSH端口号,使用非22端口(推荐)<pre><code>  #1.输入指令
+  vi /etc/ssh/sshd_config
+  #2.将Port的值改成223，前面的#号删除
+  Port 223
+  #3.输入如下指令重启ssh服务
+  systemctl restart sshd
+</code></pre> 个人比较推荐这种方式，这样做服务器会更加安全，同时在管理项目版本库的时候也更加方便，不用额外写明端口号。<br> 1.2 修改容器的SSH端口号<br> 修改gitlab容器的端口映射关系，-p 222:22<pre><code> #1.使用如下命令删除原先容器
+ docker rm gitlab
+ #2.输入命令重新运行一个gitlab容器
+ docker run -d  -p 443:443 -p 80:80 -p 222:22 --name gitlab --restart always -v /home/gitlab/config:/etc/gitlab -v /home/gitlab/logs:/var/log/gitlab -v /home/gitlab/data:/var/opt/gitlab twang2218/gitlab-ce-zh
+</code></pre></li>
+<li>浏览器中输入你设置好的ip或者域名就能访问你的gitlab了，第一次访问时需要你设置不少于八位数的密码，用户名是root，就可以进入登录页面了。<br><img src="http://res.jxzl.cc/medias/article/shi-yong-docker-kuai-su-da-jian-gitlab/11.png" alt="进行登录"></li>
+</ol>
 
             </div>
             <hr>
@@ -714,8 +728,8 @@ docker restart gitlab
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/git/" class="post-category" target="_blank">
-                                    git
+                            <a href="/categories/Git/" class="post-category" target="_blank">
+                                    Git
                                 </a>
                             
                             
@@ -730,8 +744,8 @@ docker restart gitlab
                         <span class="chip bg-color">docker</span>
                     </a>
                     
-                    <a href="/tags/git/" target="_blank">
-                        <span class="chip bg-color">git</span>
+                    <a href="/tags/Git/" target="_blank">
+                        <span class="chip bg-color">Git</span>
                     </a>
                     
                     <a href="/tags/gitlab/" target="_blank">
@@ -790,12 +804,12 @@ docker restart gitlab
                         <span class="chip bg-color">CentOs</span>
                     </a>
                     
-                    <a href="/tags/Apache/" target="_blank">
-                        <span class="chip bg-color">Apache</span>
-                    </a>
-                    
                     <a href="/tags/Mysql/" target="_blank">
                         <span class="chip bg-color">Mysql</span>
+                    </a>
+                    
+                    <a href="/tags/Apache/" target="_blank">
+                        <span class="chip bg-color">Apache</span>
                     </a>
                     
                 </div>
@@ -916,7 +930,7 @@ docker restart gitlab
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">7.2k</span>
+                <span class="white-color">7.6k</span>
             
 
             
