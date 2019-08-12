@@ -20,9 +20,9 @@
       
         <tags>
             
-            <tag> docker </tag>
-            
             <tag> Git </tag>
+            
+            <tag> docker </tag>
             
             <tag> gitlab </tag>
             
@@ -53,9 +53,9 @@
             
             <tag> CentOs </tag>
             
-            <tag> Mysql </tag>
-            
             <tag> Apache </tag>
+            
+            <tag> Mysql </tag>
             
         </tags>
       
@@ -84,9 +84,9 @@
             
             <tag> CentOs </tag>
             
-            <tag> Nginx </tag>
-            
             <tag> Mysql </tag>
+            
+            <tag> Nginx </tag>
             
         </tags>
       
@@ -138,9 +138,9 @@
       
         <tags>
             
-            <tag> Git </tag>
-            
             <tag> 版本控制工具 </tag>
+            
+            <tag> Git </tag>
             
         </tags>
       

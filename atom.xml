@@ -38,9 +38,9 @@
       <category term="Git" scheme="https://www.klinlin.com/categories/Git/"/>
     
     
-      <category term="docker" scheme="https://www.klinlin.com/tags/docker/"/>
-    
       <category term="Git" scheme="https://www.klinlin.com/tags/Git/"/>
+    
+      <category term="docker" scheme="https://www.klinlin.com/tags/docker/"/>
     
       <category term="gitlab" scheme="https://www.klinlin.com/tags/gitlab/"/>
     
@@ -73,9 +73,9 @@
     
       <category term="CentOs" scheme="https://www.klinlin.com/tags/CentOs/"/>
     
-      <category term="Mysql" scheme="https://www.klinlin.com/tags/Mysql/"/>
-    
       <category term="Apache" scheme="https://www.klinlin.com/tags/Apache/"/>
+    
+      <category term="Mysql" scheme="https://www.klinlin.com/tags/Mysql/"/>
     
   </entry>
   
@@ -106,9 +106,9 @@
     
       <category term="CentOs" scheme="https://www.klinlin.com/tags/CentOs/"/>
     
-      <category term="Nginx" scheme="https://www.klinlin.com/tags/Nginx/"/>
-    
       <category term="Mysql" scheme="https://www.klinlin.com/tags/Mysql/"/>
+    
+      <category term="Nginx" scheme="https://www.klinlin.com/tags/Nginx/"/>
     
   </entry>
   
@@ -162,9 +162,9 @@
       <category term="Git" scheme="https://www.klinlin.com/categories/Git/"/>
     
     
-      <category term="Git" scheme="https://www.klinlin.com/tags/Git/"/>
-    
       <category term="版本控制工具" scheme="https://www.klinlin.com/tags/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="Git" scheme="https://www.klinlin.com/tags/Git/"/>
     
   </entry>
   
