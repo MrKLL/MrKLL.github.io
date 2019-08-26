@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.klinlin.com/"/>
-  <updated>2019-08-09T08:09:15.133Z</updated>
+  <updated>2019-08-26T09:14:32.308Z</updated>
   <id>https://www.klinlin.com/</id>
   
   <author>
@@ -17,11 +17,41 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>supervisor的使用</title>
+    <link href="https://www.klinlin.com/2018/06/18/supervisor-de-shi-yong/"/>
+    <id>https://www.klinlin.com/2018/06/18/supervisor-de-shi-yong/</id>
+    <published>2018-06-18T09:02:55.000Z</published>
+    <updated>2019-08-26T09:14:32.308Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h4&gt;&lt;p&gt;  
+        
+      
+    
+    </summary>
+    
+      <category term="Supervisor" scheme="https://www.klinlin.com/categories/Supervisor/"/>
+    
+    
+      <category term="Supervisor" scheme="https://www.klinlin.com/tags/Supervisor/"/>
+    
+      <category term="进程" scheme="https://www.klinlin.com/tags/%E8%BF%9B%E7%A8%8B/"/>
+    
+      <category term="tool" scheme="https://www.klinlin.com/tags/tool/"/>
+    
+  </entry>
+  
+  <entry>
     <title>使用docker快速搭建gitlab</title>
-    <link href="https://www.klinlin.com/2018/04/18/shi-yong-docker-kuai-su-da-jian-gitlab/"/>
-    <id>https://www.klinlin.com/2018/04/18/shi-yong-docker-kuai-su-da-jian-gitlab/</id>
-    <published>2018-04-18T08:30:38.000Z</published>
-    <updated>2019-08-09T08:09:15.133Z</updated>
+    <link href="https://www.klinlin.com/2018/05/10/shi-yong-docker-kuai-su-da-jian-gitlab/"/>
+    <id>https://www.klinlin.com/2018/05/10/shi-yong-docker-kuai-su-da-jian-gitlab/</id>
+    <published>2018-05-10T08:30:38.000Z</published>
+    <updated>2019-08-26T09:02:56.709Z</updated>
     
     <summary type="html">
     
@@ -73,9 +103,9 @@
     
       <category term="CentOs" scheme="https://www.klinlin.com/tags/CentOs/"/>
     
-      <category term="Apache" scheme="https://www.klinlin.com/tags/Apache/"/>
-    
       <category term="Mysql" scheme="https://www.klinlin.com/tags/Mysql/"/>
+    
+      <category term="Apache" scheme="https://www.klinlin.com/tags/Apache/"/>
     
   </entry>
   
@@ -106,9 +136,9 @@
     
       <category term="CentOs" scheme="https://www.klinlin.com/tags/CentOs/"/>
     
-      <category term="Mysql" scheme="https://www.klinlin.com/tags/Mysql/"/>
-    
       <category term="Nginx" scheme="https://www.klinlin.com/tags/Nginx/"/>
+    
+      <category term="Mysql" scheme="https://www.klinlin.com/tags/Mysql/"/>
     
   </entry>
   

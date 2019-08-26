@@ -4,9 +4,38 @@
   
     
     <entry>
+      <title>supervisor的使用</title>
+      <link href="/2018/06/18/supervisor-de-shi-yong/"/>
+      <url>/2018/06/18/supervisor-de-shi-yong/</url>
+      
+        <content type="html"><![CDATA[<h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>   Supervisor是用Python开发的一个client/server服务，是Linux/Unix系统下的一个进程管理工具，不支持Windows系统。它可以很方便的监听、启动、停止、重启一个或多个进程。用Supervisor管理的进程，当一个进程意外被杀死，supervisort监听到进程死后，会自动将它重新拉起，很方便的做到进程自动恢复的功能，不再需要自己写shell脚本来控制。</p><h4 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h4><pre><code>一台装有Linux/Unix系统的服务器，本示例中使用CentOs7。</code></pre><h4 id="二、下载Python包管理工具"><a href="#二、下载Python包管理工具" class="headerlink" title="二、下载Python包管理工具"></a>二、下载Python包管理工具</h4><pre><code>#使用如下指令下载yum -y install python-setuptools</code></pre><h4 id="三、通过Python包管理工具下载安装Supervisor"><a href="#三、通过Python包管理工具下载安装Supervisor" class="headerlink" title="三、通过Python包管理工具下载安装Supervisor"></a>三、通过Python包管理工具下载安装Supervisor</h4><pre><code>#使用如下指令下载安装easy_install supervisor</code></pre><h4 id="四、进行相关配置"><a href="#四、进行相关配置" class="headerlink" title="四、进行相关配置"></a>四、进行相关配置</h4><pre><code>#1.新建配置文件夹mkdir /etc/supervisormkdir /etc/conf.d#2.使用命令生成配置文件echo_supervisord_conf &gt; /etc/supervisor/supervisord.conf#3.打开/etc/supervisor/supervisord.conf,在文件尾部添加如下配置,保存[include]files=conf.d/*.conf</code></pre><h4 id="五、为需要管理的进程添加配置文件"><a href="#五、为需要管理的进程添加配置文件" class="headerlink" title="五、为需要管理的进程添加配置文件"></a>五、为需要管理的进程添加配置文件</h4><pre><code>#在conf.d目录里编写自己需要管理的进程配置文件，;为注释符号#配置文件demo，具体情况按照自己需求修改参数值，创建一个名为projectName.conf的配置文件[program: ProjectName] ; command= ; 这个参数的值是运行程序的各种指令directory= ; 命令执行的所需要在的目录autorestart=true ; 程序意外退出是否自动重启autostart=true ; 是否自动启动;进程数的数量numprocs=1;当进程数参数 numprocs为1时,process_name=%(program_name)s;当进程数参数 numprocs&gt;=2时,process_name=%(process_num)02dprocess_name=%(program_name)s;当进程数参数 numprocs&gt;=2时,stderr_logfile=/var/log/%(process_num)02d.err.logstderr_logfile=/var/log/ProjectName.err.log ; 错误日志文件;当进程数参数 numprocs&gt;=2时,stderr_logfile=/var/log/%(process_num)02d.out.logstdout_logfile=/var/log/ProjectName.out.log ; 输出日志文件stopasgroup=true             ; 这个东西主要用于，supervisord管理的子进程，这个子进程本身还有子进程。那么我们如果仅仅干掉supervisord的子进程的话，子进程的子进程有可能会变成孤儿进程。所以咱们可以设置可个选项，把整个该子进程的整个进程组都干掉。 设置为true的话，一般killasgroup也会被设置为true。需要注意的是，该选项发送的是stop信号默认为false。非必须设置。killasgroup=true            ;同上，只不过是杀死了进程，一般和上面的一起使用user=root ; 进程执行的用户身份stopsignal=INTstartsecs=1 ; 自动重启间隔 startretries=5 ; 自动重启失败，最多重试次数</code></pre><h4 id="六、启动Supervisord"><a href="#六、启动Supervisord" class="headerlink" title="六、启动Supervisord"></a>六、启动Supervisord</h4><pre><code># 输入指令# -c 表示以指定位置的配置文件启动supervisord -c /etc/supervisor/supervisord.conf</code></pre><h4 id="七、设置Supervisord开机自动启动-Centos7系统"><a href="#七、设置Supervisord开机自动启动-Centos7系统" class="headerlink" title="七、设置Supervisord开机自动启动(Centos7系统)"></a>七、设置Supervisord开机自动启动(Centos7系统)</h4><pre><code> #1.输入如下指令 vim /usr/lib/systemd/system/supervisord.service #2.输入如下内容，保存文件 [Unit] Description=Supervisor daemon  [Service] Type=forking ExecStart=/usr/bin/supervisord -c /etc/supervisor/supervisord.conf ExecStop=/usr/bin/supervisorctl shutdown ExecReload=/usr/bin/supervisorctl reload KillMode=process Restart=on-failure RestartSec=42s  [Install] WantedBy=multi-user.target  #3.再执行如下命令 systemctl enable supervisord #4.出现以下提示说明设置成功 Created symlink from /etc/systemd/system/multi-user.target.wants/supervisord.service to /usr/lib/systemd/system/supervisord.service.</code></pre><h4 id="八、配置web管理页面"><a href="#八、配置web管理页面" class="headerlink" title="八、配置web管理页面"></a>八、配置web管理页面</h4><pre><code>#1.输入指令vi /etc/supervisor/supervisord.conf#2.找到[inet_http_server]模块,将配置前面的;注释符号删除,并修改值为实际的值[inet_http_server]         ; 开启web页面访问模块port=0.0.0.0:9009        ;允许访问的ip和端口号username=root              ; 设置用户名password=xm369               ; 设置密码#3.使用服务器ip地址以及端口号就能直接访问web管理页面了</code></pre><h4 id="九、常用指令"><a href="#九、常用指令" class="headerlink" title="九、常用指令"></a>九、常用指令</h4><pre><code>supervisorctl restart &lt;application name&gt; ;重启指定应用supervisorctl stop &lt;application name&gt; ;停止指定应用supervisorctl start &lt;application name&gt; ;启动指定应用supervisorctl restart all ;重启所有应用supervisorctl stop all ;停止所有应用supervisorctl start all ;启动所有应用supervisorctl status  ;查看所有应用状态supervisorctl status &lt;application name&gt;  ;查看指定应用状态supervisorctl reload  ;重新载入新配置，启动所有应用supervisorctl update  ;修改配置文件后，使用此命令进行更新</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Supervisor </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Supervisor </tag>
+            
+            <tag> 进程 </tag>
+            
+            <tag> tool </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>使用docker快速搭建gitlab</title>
-      <link href="/2018/04/18/shi-yong-docker-kuai-su-da-jian-gitlab/"/>
-      <url>/2018/04/18/shi-yong-docker-kuai-su-da-jian-gitlab/</url>
+      <link href="/2018/05/10/shi-yong-docker-kuai-su-da-jian-gitlab/"/>
+      <url>/2018/05/10/shi-yong-docker-kuai-su-da-jian-gitlab/</url>
       
         <content type="html"><![CDATA[<p>   如今最常用的代码版本控制工具当属git了，相对于命令行操作，我们更加需要一个web可视化界面来更好的进行管控我们的项目，GitLab 是一个用于仓库管理系统的开源项目，使用Git作为代码管理工具，使用它可以帮助我们更好的进行团队协作开发项目，下面我们来使用docker快速搭建一个私有的git服务器吧。</p><h4 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h4><pre><code>装有CentOs7的服务器</code></pre><h4 id="一、下载docker"><a href="#一、下载docker" class="headerlink" title="一、下载docker"></a>一、下载docker</h4><pre><code>#使用如下指令下载dockeryum -y install docker</code></pre><p><img src="http://res.jxzl.cc/medias/article/shi-yong-docker-kuai-su-da-jian-gitlab/1.png" alt="下载docker"></p><p><img src="http://res.jxzl.cc/medias/article/shi-yong-docker-kuai-su-da-jian-gitlab/2.png" alt="下载docker成功"></p><h4 id="二、运行docker"><a href="#二、运行docker" class="headerlink" title="二、运行docker"></a>二、运行docker</h4><pre><code>#使用如下指令运行dockersystemctl start docker</code></pre><h4 id="三、搜索gitlab镜像"><a href="#三、搜索gitlab镜像" class="headerlink" title="三、搜索gitlab镜像"></a>三、搜索gitlab镜像</h4><pre><code>#搜索gitlab中文社区版镜像docker search gitlab</code></pre><p><img src="http://res.jxzl.cc/medias/article/shi-yong-docker-kuai-su-da-jian-gitlab/3.png" alt="搜索gitlab镜像"></p><h4 id="四、下载gitlab中文镜像"><a href="#四、下载gitlab中文镜像" class="headerlink" title="四、下载gitlab中文镜像"></a>四、下载gitlab中文镜像</h4><pre><code>#输入如下指令下载gitlab中文镜像docker pull twang2218/gitlab-ce-zh</code></pre><p><img src="http://res.jxzl.cc/medias/article/shi-yong-docker-kuai-su-da-jian-gitlab/4.png" alt="下载gitlab中文镜像"><br><img src="http://res.jxzl.cc/medias/article/shi-yong-docker-kuai-su-da-jian-gitlab/5.png" alt="下载镜像完成"></p><h4 id="五、配置并运行镜像"><a href="#五、配置并运行镜像" class="headerlink" title="五、配置并运行镜像"></a>五、配置并运行镜像</h4><pre><code># 输入指令docker run -d  -p 443:443 -p 80:80 -p 22:22 --name gitlab --restart always -v /home/gitlab/config:/etc/gitlab -v /home/gitlab/logs:/var/log/gitlab -v /home/gitlab/data:/var/opt/gitlab twang2218/gitlab-ce-zh# -d:后台运行# -p:docker 服务器端口映射容器内部端口# --name: docker容器命名，方便对该容器进行管理和操作# --restart always:让该容器跟随docker重启而重启# -v:将容器内配置文件、日志文件、数据文件挂载到外部文件夹中，方便操作</code></pre><p><img src="http://res.jxzl.cc/medias/article/shi-yong-docker-kuai-su-da-jian-gitlab/6.png" alt="启动gitlab容器成功"></p><h4 id="六、修改gitlab配置信息"><a href="#六、修改gitlab配置信息" class="headerlink" title="六、修改gitlab配置信息"></a>六、修改gitlab配置信息</h4><p>至此，gitlab已经可以运行使用了，但是在gitlab上创建项目的时候，生成的项目访问Url是按照容器id来生成的，但是作为git服务器，我们的项目需要一个固定的访问Url,所以我们需要对gitlab的配置文件gitlab.rb(完整路径：/home/gitlab/config/gitlab.rb)进行一些修改:</p><pre><code># 输入指令vi /home/gitlab/config/gitlab.rb# 修改http访问地址(支持ip地址和域名)，端口号不写默认为80external_url &#39;http://你的ip地址&#39;或&#39;http://你的域名&#39;# 修改ssh协议所使用的访问地址和端口gitlab_rails[&#39;gitlab_ssh_host&#39;] = &#39;你的ip地址&#39;或&#39;你的域名&#39;gitlab_rails[&#39;gitlab_shell_ssh_port&#39;] = 22 # 此端口指的是docker内部端口,在执行run指令的时候，我们将服务器的22端口映射到容器的22端口，所以填写22</code></pre><p><img src="http://res.jxzl.cc/medias/article/shi-yong-docker-kuai-su-da-jian-gitlab/7.png" alt="修改external_url配置项"><br><img src="http://res.jxzl.cc/medias/article/shi-yong-docker-kuai-su-da-jian-gitlab/8.png" alt="修改gitlab_ssh_host配置项"><br><img src="http://res.jxzl.cc/medias/article/shi-yong-docker-kuai-su-da-jian-gitlab/9.png" alt="修改gitlab_shell_ssh_port配置项"></p><h4 id="七、重启gitlab容器"><a href="#七、重启gitlab容器" class="headerlink" title="七、重启gitlab容器"></a>七、重启gitlab容器</h4><pre><code>#输入指令docker restart gitlab</code></pre><p><img src="http://res.jxzl.cc/medias/article/shi-yong-docker-kuai-su-da-jian-gitlab/10.png" alt="重启gitlab容器成功"></p><h4 id="八、注意事项"><a href="#八、注意事项" class="headerlink" title="八、注意事项"></a>八、注意事项</h4><ol><li>我们在运行gitlab容器的时候，使用容器的222端口映射服务器的22端口，而服务器上SSH服务默认端口也是22，这样会产生端口冲突，所以需要修改两者之一的端口号：<br> 1.1 修改服务器的SSH端口号,使用非22端口(推荐)<pre><code>  #1.输入指令  vi /etc/ssh/sshd_config  #2.将Port的值改成223，前面的#号删除  Port 223  #3.输入如下指令重启ssh服务  systemctl restart sshd</code></pre> 个人比较推荐这种方式，这样做服务器会更加安全，同时在管理项目版本库的时候也更加方便，不用额外写明端口号。<br> 1.2 修改容器的SSH端口号<br> 修改gitlab容器的端口映射关系，-p 222:22<pre><code> #1.使用如下命令删除原先容器 docker rm gitlab #2.输入命令重新运行一个gitlab容器 docker run -d  -p 443:443 -p 80:80 -p 222:22 --name gitlab --restart always -v /home/gitlab/config:/etc/gitlab -v /home/gitlab/logs:/var/log/gitlab -v /home/gitlab/data:/var/opt/gitlab twang2218/gitlab-ce-zh</code></pre></li><li>浏览器中输入你设置好的ip或者域名就能访问你的gitlab了，第一次访问时需要你设置不少于八位数的密码，用户名是root，就可以进入登录页面了。<br><img src="http://res.jxzl.cc/medias/article/shi-yong-docker-kuai-su-da-jian-gitlab/11.png" alt="进行登录"></li></ol>]]></content>
       
@@ -53,9 +82,9 @@
             
             <tag> CentOs </tag>
             
-            <tag> Apache </tag>
-            
             <tag> Mysql </tag>
+            
+            <tag> Apache </tag>
             
         </tags>
       
@@ -84,9 +113,9 @@
             
             <tag> CentOs </tag>
             
-            <tag> Mysql </tag>
-            
             <tag> Nginx </tag>
+            
+            <tag> Mysql </tag>
             
         </tags>
       
