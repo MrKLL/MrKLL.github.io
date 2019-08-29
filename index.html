@@ -327,8 +327,15 @@
 </div>
 <script>
 // 每天切换 banner 图.  Switch banner image every day.
-$('.bg-cover').css('background-image', 'url(http://res.jxzl.cc/medias/banaer/' + new Date().getDay() + '.jpg)');
+//$('.bg-cover').css('background-image', 'url(http://res.jxzl.cc/medias/banaer/' + new Date().getDay() + '.jpg)');
+//随机切换banner图
+$('.bg-cover').css('background-image', 'url(http://res.jxzl.cc/medias/banaer/' + getNum(0,6) + '.jpg)');
 //$('.bg-cover').css('background-image', 'url(http://res.jxzl.cc/medias/banaer/3.jpg');
+//随机获取两个整数之间的整数
+    function getNum(start,end)
+    {
+        return Math.floor(Math.random() * (end - start) + start)
+    }
 </script>
 
             <div class="cover-btns">

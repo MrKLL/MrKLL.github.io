@@ -280,8 +280,15 @@
 </div>
 <script>
 // 每天切换 banner 图.  Switch banner image every day.
-$('.bg-cover').css('background-image', 'url(http://res.jxzl.cc/medias/banaer/' + new Date().getDay() + '.jpg)');
+//$('.bg-cover').css('background-image', 'url(http://res.jxzl.cc/medias/banaer/' + new Date().getDay() + '.jpg)');
+//随机切换banner图
+$('.bg-cover').css('background-image', 'url(http://res.jxzl.cc/medias/banaer/' + getNum(0,6) + '.jpg)');
 //$('.bg-cover').css('background-image', 'url(http://res.jxzl.cc/medias/banaer/3.jpg');
+//随机获取两个整数之间的整数
+    function getNum(start,end)
+    {
+        return Math.floor(Math.random() * (end - start) + start)
+    }
 </script>
     </div>
 </div>
@@ -504,7 +511,7 @@ $('.bg-cover').css('background-image', 'url(http://res.jxzl.cc/medias/banaer/' +
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"Git","value":2},{"name":"PHP","value":3},{"name":"Supervisor","value":1},{"name":"tool","value":1}],
+                data: [{"name":"PHP","value":3},{"name":"Git","value":2},{"name":"Supervisor","value":1},{"name":"tool","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -528,7 +535,7 @@ $('.bg-cover').css('background-image', 'url(http://res.jxzl.cc/medias/banaer/' +
         xAxis: [
             {
                 type: 'category',
-                data: ["Git","Linux","CentOs","Mysql","tool","gitlab","Supervisor","进程","版本控制工具","代码编辑器"]
+                data: ["Git","Linux","CentOs","Mysql","tool","gitlab","Supervisor","进程","Laravel","代码编辑器"]
             }
         ],
         yAxis: [
@@ -652,18 +659,6 @@ $('.bg-cover').css('background-image', 'url(http://res.jxzl.cc/medias/banaer/' +
         <div class="tag-chips center-align">
             
             
-            <a href="/tags/版本控制工具/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">版本控制工具</span>
-            </a>
-            
-            
-            
-            <a href="/tags/Git/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">Git</span>
-            </a>
-            
-            
-            
             <a href="/tags/框架/" target="_blank">
                 <span class="chip center-align waves-effect waves-light chip-default">框架</span>
             </a>
@@ -672,6 +667,18 @@ $('.bg-cover').css('background-image', 'url(http://res.jxzl.cc/medias/banaer/' +
             
             <a href="/tags/Laravel/" target="_blank">
                 <span class="chip center-align waves-effect waves-light chip-default">Laravel</span>
+            </a>
+            
+            
+            
+            <a href="/tags/版本控制工具/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">版本控制工具</span>
+            </a>
+            
+            
+            
+            <a href="/tags/Git/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">Git</span>
             </a>
             
             

@@ -273,8 +273,15 @@
 </div>
 <script>
 // 每天切换 banner 图.  Switch banner image every day.
-$('.bg-cover').css('background-image', 'url(http://res.jxzl.cc/medias/banaer/' + new Date().getDay() + '.jpg)');
+//$('.bg-cover').css('background-image', 'url(http://res.jxzl.cc/medias/banaer/' + new Date().getDay() + '.jpg)');
+//随机切换banner图
+$('.bg-cover').css('background-image', 'url(http://res.jxzl.cc/medias/banaer/' + getNum(0,6) + '.jpg)');
 //$('.bg-cover').css('background-image', 'url(http://res.jxzl.cc/medias/banaer/3.jpg');
+//随机获取两个整数之间的整数
+    function getNum(start,end)
+    {
+        return Math.floor(Math.random() * (end - start) + start)
+    }
 </script>
     </div>
 </div>
@@ -292,25 +299,9 @@ $('.bg-cover').css('background-image', 'url(http://res.jxzl.cc/medias/banaer/' +
             <div class="tag-chips">
                 
                 
-                <a href="/tags/版本控制工具/" title="版本控制工具: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default " data-tagname="版本控制工具" style="background-color: #F9EBEA;">版本控制工具
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Git/" title="Git: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-active " data-tagname="Git" style="background-color: #F5EEF8;">Git
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/tags/框架/" title="框架: 1">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default " data-tagname="框架" style="background-color: #D5F5E3;">框架
+                             chip-default " data-tagname="框架" style="background-color: #F9EBEA;">框架
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -318,8 +309,24 @@ $('.bg-cover').css('background-image', 'url(http://res.jxzl.cc/medias/banaer/' +
                 
                 <a href="/tags/Laravel/" title="Laravel: 1">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default " data-tagname="Laravel" style="background-color: #E8F8F5;">Laravel
+                             chip-default " data-tagname="Laravel" style="background-color: #F5EEF8;">Laravel
                         <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/版本控制工具/" title="版本控制工具: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default " data-tagname="版本控制工具" style="background-color: #D5F5E3;">版本控制工具
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Git/" title="Git: 2">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active " data-tagname="Git" style="background-color: #E8F8F5;">Git
+                        <span class="tag-length">2</span>
                     </span>
                 </a>
                 
