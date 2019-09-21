@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.klinlin.com/"/>
-  <updated>2019-08-26T09:14:32.308Z</updated>
+  <updated>2019-09-21T02:30:46.430Z</updated>
   <id>https://www.klinlin.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Swoole编译安装</title>
+    <link href="https://www.klinlin.com/2018/06/22/swoole-bian-yi-an-zhuang/"/>
+    <id>https://www.klinlin.com/2018/06/22/swoole-bian-yi-an-zhuang/</id>
+    <published>2018-06-22T06:03:46.000Z</published>
+    <updated>2019-09-21T02:30:46.430Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h4&gt;&lt;p&gt;   Swoole是一个面向生产环境的 PHP 异步网络通信引擎，使 PHP 开发人员可以编写高性能的异步并发 TCP、UDP、Unix
+        
+      
+    
+    </summary>
+    
+      <category term="Swoole" scheme="https://www.klinlin.com/categories/Swoole/"/>
+    
+    
+      <category term="进程" scheme="https://www.klinlin.com/tags/%E8%BF%9B%E7%A8%8B/"/>
+    
+      <category term="Swoole" scheme="https://www.klinlin.com/tags/Swoole/"/>
+    
+      <category term="扩展" scheme="https://www.klinlin.com/tags/%E6%89%A9%E5%B1%95/"/>
+    
+  </entry>
   
   <entry>
     <title>supervisor的使用</title>
@@ -68,9 +98,9 @@
       <category term="Git" scheme="https://www.klinlin.com/categories/Git/"/>
     
     
-      <category term="docker" scheme="https://www.klinlin.com/tags/docker/"/>
-    
       <category term="Git" scheme="https://www.klinlin.com/tags/Git/"/>
+    
+      <category term="docker" scheme="https://www.klinlin.com/tags/docker/"/>
     
       <category term="gitlab" scheme="https://www.klinlin.com/tags/gitlab/"/>
     
@@ -192,9 +222,9 @@
       <category term="Git" scheme="https://www.klinlin.com/categories/Git/"/>
     
     
-      <category term="Git" scheme="https://www.klinlin.com/tags/Git/"/>
-    
       <category term="版本控制工具" scheme="https://www.klinlin.com/tags/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="Git" scheme="https://www.klinlin.com/tags/Git/"/>
     
   </entry>
   

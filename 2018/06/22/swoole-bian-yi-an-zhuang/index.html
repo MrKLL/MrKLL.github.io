@@ -4,8 +4,8 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="supervisor的使用, MrKLL">
-    <meta name="description" content="简介   Supervisor是用Python开发的一个client/server服务，是Linux/Unix系统下的一个进程管理工具，不支持Windows系统。它可以很方便的监听、启动、停止、重启一个或多个进程。用Supervisor管理">
+    <meta name="keywords" content="Swoole编译安装, MrKLL">
+    <meta name="description" content="简介   Swoole是一个面向生产环境的 PHP 异步网络通信引擎，使 PHP 开发人员可以编写高性能的异步并发 TCP、UDP、Unix Socket、HTTP，WebSocket 服务。Swoole 可以广泛应用于互联网、移动通信、企">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>supervisor的使用 | MrKLL</title>
+    <title>Swoole编译安装 | MrKLL</title>
     <link rel="icon" type="image/jpeg" href="http://res.jxzl.cc/medias/avatar.jpg">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -256,13 +256,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('http://res.jxzl.cc/medias/featureimages/33.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('http://res.jxzl.cc/medias/featureimages/35.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        supervisor的使用
+                        Swoole编译安装
                     </div>
                 </div>
             </div>
@@ -373,16 +373,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Supervisor/" target="_blank">
-                                <span class="chip bg-color">Supervisor</span>
-                            </a>
-                        
                             <a href="/tags/进程/" target="_blank">
                                 <span class="chip bg-color">进程</span>
                             </a>
                         
-                            <a href="/tags/tool/" target="_blank">
-                                <span class="chip bg-color">tool</span>
+                            <a href="/tags/Swoole/" target="_blank">
+                                <span class="chip bg-color">Swoole</span>
+                            </a>
+                        
+                            <a href="/tags/扩展/" target="_blank">
+                                <span class="chip bg-color">扩展</span>
                             </a>
                         
                     </div>
@@ -393,8 +393,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Supervisor/" class="post-category" target="_blank">
-                                Supervisor
+                            <a href="/categories/Swoole/" class="post-category" target="_blank">
+                                Swoole
                             </a>
                         
                     </div>
@@ -405,21 +405,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2018-06-18
+                    2018-06-22
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        1k
+                        526
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        4 分
+                        2 分
                     </div>
                     
                 
@@ -435,85 +435,50 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>   Supervisor是用Python开发的一个client/server服务，是Linux/Unix系统下的一个进程管理工具，不支持Windows系统。它可以很方便的监听、启动、停止、重启一个或多个进程。用Supervisor管理的进程，当一个进程意外被杀死，supervisort监听到进程死后，会自动将它重新拉起，很方便的做到进程自动恢复的功能，不再需要自己写shell脚本来控制。</p>
+                <h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>   Swoole是一个面向生产环境的 PHP 异步网络通信引擎，使 PHP 开发人员可以编写高性能的异步并发 TCP、UDP、Unix Socket、HTTP，WebSocket 服务。Swoole 可以广泛应用于互联网、移动通信、企业软件、云计算、网络游戏、物联网（IOT）、车联网、智能家居等领域。 使用 PHP + Swoole 作为网络通信框架，可以使企业 IT 研发团队的效率大大提升。</p>
+<h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><ol>
+<li>仅支持 Linux、FreeBSD、MacOS 三种操作系统</li>
+<li>在Windows平台，可使用CygWin或WSL(Windows Subsystem for Linux)</li>
+<li>Linux 内核版本 2.3.32 以上</li>
+<li>gcc4.4 以上版本或者clang</li>
+<li>gcc-4.8 或更高版本</li>
+<li>make</li>
+<li>autoconf</li>
+<li>Swoole-1.x需要 PHP-5.3.10 或更高版本</li>
+<li>Swoole-2.x需要 PHP-7.0.0 或更高版本</li>
+<li>Swoole-4.x需要 PHP-7.1.0 或更高版本</li>
+<li><a href="https://wiki.swoole.com/wiki/page/7.html" target="_blank" rel="noopener">更多注意事项</a></li>
+</ol>
 <h4 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h4><pre><code>一台装有Linux/Unix系统的服务器，本示例中使用CentOs7。
-</code></pre><h4 id="二、下载Python包管理工具"><a href="#二、下载Python包管理工具" class="headerlink" title="二、下载Python包管理工具"></a>二、下载Python包管理工具</h4><pre><code>#使用如下指令下载
-yum -y install python-setuptools
-</code></pre><h4 id="三、通过Python包管理工具下载安装Supervisor"><a href="#三、通过Python包管理工具下载安装Supervisor" class="headerlink" title="三、通过Python包管理工具下载安装Supervisor"></a>三、通过Python包管理工具下载安装Supervisor</h4><pre><code>#使用如下指令下载安装
-easy_install supervisor
-</code></pre><h4 id="四、进行相关配置"><a href="#四、进行相关配置" class="headerlink" title="四、进行相关配置"></a>四、进行相关配置</h4><pre><code>#1.新建配置文件夹
-mkdir /etc/supervisor
-mkdir /etc/conf.d
-#2.使用命令生成配置文件
-echo_supervisord_conf &gt; /etc/supervisor/supervisord.conf
-#3.打开/etc/supervisor/supervisord.conf,在文件尾部添加如下配置,保存
-[include]
-files=conf.d/*.conf
-</code></pre><h4 id="五、为需要管理的进程添加配置文件"><a href="#五、为需要管理的进程添加配置文件" class="headerlink" title="五、为需要管理的进程添加配置文件"></a>五、为需要管理的进程添加配置文件</h4><pre><code>#在conf.d目录里编写自己需要管理的进程配置文件，;为注释符号
-#配置文件demo，具体情况按照自己需求修改参数值，创建一个名为projectName.conf的配置文件
-[program: ProjectName] ; 
-command= ; 这个参数的值是运行程序的各种指令
-directory= ; 命令执行的所需要在的目录
-autorestart=true ; 程序意外退出是否自动重启
-autostart=true ; 是否自动启动
-;进程数的数量
-numprocs=1
-;当进程数参数 numprocs为1时,process_name=%(program_name)s
-;当进程数参数 numprocs&gt;=2时,process_name=%(process_num)02d
-process_name=%(program_name)s
-;当进程数参数 numprocs&gt;=2时,stderr_logfile=/var/log/%(process_num)02d.err.log
-stderr_logfile=/var/log/ProjectName.err.log ; 错误日志文件
-;当进程数参数 numprocs&gt;=2时,stderr_logfile=/var/log/%(process_num)02d.out.log
-stdout_logfile=/var/log/ProjectName.out.log ; 输出日志文件
-stopasgroup=true             ; 这个东西主要用于，supervisord管理的子进程，这个子进程本身还有子进程。那么我们如果仅仅干掉supervisord的子进程的话，子进程的子进程有可能会变成孤儿进程。所以咱们可以设置可个选项，把整个该子进程的整个进程组都干掉。 设置为true的话，一般killasgroup也会被设置为true。需要注意的是，该选项发送的是stop信号默认为false。非必须设置。
-killasgroup=true            ;同上，只不过是杀死了进程，一般和上面的一起使用
-user=root ; 进程执行的用户身份
-stopsignal=INT
-startsecs=1 ; 自动重启间隔 
-startretries=5 ; 自动重启失败，最多重试次数
-</code></pre><h4 id="六、启动Supervisord"><a href="#六、启动Supervisord" class="headerlink" title="六、启动Supervisord"></a>六、启动Supervisord</h4><pre><code># 输入指令
-# -c 表示以指定位置的配置文件启动
-supervisord -c /etc/supervisor/supervisord.conf
-</code></pre><h4 id="七、设置Supervisord开机自动启动-Centos7系统"><a href="#七、设置Supervisord开机自动启动-Centos7系统" class="headerlink" title="七、设置Supervisord开机自动启动(Centos7系统)"></a>七、设置Supervisord开机自动启动(Centos7系统)</h4><pre><code> #1.输入如下指令
- vim /usr/lib/systemd/system/supervisord.service
- #2.输入如下内容，保存文件
- [Unit]
- Description=Supervisor daemon 
+</code></pre><h4 id="二、下载Swoole源码"><a href="#二、下载Swoole源码" class="headerlink" title="二、下载Swoole源码"></a>二、下载Swoole源码</h4><pre><code>#1.在根目录新建www目录并进入www目录
+mkdir /www
+cd /www
+#2.在http://pecl.php.net/package/swoole上找到你想要下载的swoole扩展版本
+</code></pre><p><img src="http://res.jxzl.cc/medias/article/swoole-bian-yi-an-zhuang/1.png" alt="swoole版本"></p>
+<pre><code>#3.使用wget指令进行下载(本示例选择2.1.1版本)
+wget http://pecl.php.net/get/swoole-2.1.1.tgz
+</code></pre><p><img src="http://res.jxzl.cc/medias/article/swoole-bian-yi-an-zhuang/2.png" alt="下载swoole"></p>
+<h4 id="三、编译安装Swoole"><a href="#三、编译安装Swoole" class="headerlink" title="三、编译安装Swoole"></a>三、编译安装Swoole</h4><pre><code>#1.使用如下指令进行解压
+tar zxvf swoole-2.1.1.tgz
+#2.解压完成后，进入swoole-2.1.1文件夹
+cd swoole-2.1.1
+#3.依次执行如下指令进行编译安装,(此处打开了对ssl的支持，在https和wss时需要使用)
+phpize
+./configure --enable-openssl --with-php-config=/usr/bin/php-config
+make &amp;&amp; make install
+</code></pre><p><img src="http://res.jxzl.cc/medias/article/swoole-bian-yi-an-zhuang/3.png" alt="swoole安装完成"></p>
+<h4 id="四、开启swoole扩展"><a href="#四、开启swoole扩展" class="headerlink" title="四、开启swoole扩展"></a>四、开启swoole扩展</h4><pre><code>#1.新建一个扩展配置文件
+vim /etc/php.d/swoole.ini
+#2.输入以下值
+extension=swoole.so
+#3.保存该配置文件
+</code></pre><h4 id="五、重启php-fpm-使扩展生效-如使用apache-重启httpd就好了"><a href="#五、重启php-fpm-使扩展生效-如使用apache-重启httpd就好了" class="headerlink" title="五、重启php-fpm,使扩展生效(如使用apache,重启httpd就好了)"></a>五、重启php-fpm,使扩展生效(如使用apache,重启httpd就好了)</h4><pre><code>#1.使用如下指令重启php-fpm
+systemctl restart php-fpm
+#2.使用指令查看swoole扩展是否开启成功
+php -m
+#3.如下图所有则swoole扩展已经开启成功
+</code></pre><p><img src="http://res.jxzl.cc/medias/article/swoole-bian-yi-an-zhuang/4.png" alt="swoole开启成功"></p>
 
- [Service]
- Type=forking
- ExecStart=/usr/bin/supervisord -c /etc/supervisor/supervisord.conf
- ExecStop=/usr/bin/supervisorctl shutdown
- ExecReload=/usr/bin/supervisorctl reload
- KillMode=process
- Restart=on-failure
- RestartSec=42s 
-
- [Install]
- WantedBy=multi-user.target 
- #3.再执行如下命令
- systemctl enable supervisord
- #4.出现以下提示说明设置成功
- Created symlink from /etc/systemd/system/multi-user.target.wants/supervisord.service to /usr/lib/systemd/system/supervisord.service.
-</code></pre><h4 id="八、配置web管理页面"><a href="#八、配置web管理页面" class="headerlink" title="八、配置web管理页面"></a>八、配置web管理页面</h4><pre><code>#1.输入指令
-vi /etc/supervisor/supervisord.conf
-#2.找到[inet_http_server]模块,将配置前面的;注释符号删除,并修改值为实际的值
-[inet_http_server]         ; 开启web页面访问模块
-port=0.0.0.0:9009        ;允许访问的ip和端口号
-username=root              ; 设置用户名
-password=xm369               ; 设置密码
-#3.使用服务器ip地址以及端口号就能直接访问web管理页面了
-</code></pre><h4 id="九、常用指令"><a href="#九、常用指令" class="headerlink" title="九、常用指令"></a>九、常用指令</h4><pre><code>supervisorctl restart &lt;application name&gt; ;重启指定应用
-supervisorctl stop &lt;application name&gt; ;停止指定应用
-supervisorctl start &lt;application name&gt; ;启动指定应用
-supervisorctl restart all ;重启所有应用
-supervisorctl stop all ;停止所有应用
-supervisorctl start all ;启动所有应用
-supervisorctl status  ;查看所有应用状态
-supervisorctl status &lt;application name&gt;  ;查看指定应用状态
-supervisorctl reload  ;重新载入新配置，启动所有应用
-supervisorctl update  ;修改配置文件后，使用此命令进行更新
-</code></pre>
             </div>
             <hr>
 
@@ -668,9 +633,9 @@ supervisorctl update  ;修改配置文件后，使用此命令进行更新
             </div>
             <br>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">
-                    《supervisor的使用》
+                    《Swoole编译安装》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2018/06/18/supervisor-de-shi-yong/" property="cc:attributionName" rel="cc:attributionURL">
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2018/06/22/swoole-bian-yi-an-zhuang/" property="cc:attributionName" rel="cc:attributionURL">
                 MrKLL
             </a> 采用
             <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
@@ -733,7 +698,8 @@ supervisorctl update  ;修改配置文件后，使用此命令进行更新
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2018/06/22/swoole-bian-yi-an-zhuang/">
                     <div class="card-image">
@@ -750,9 +716,9 @@ supervisorctl update  ;修改配置文件后，使用此命令进行更新
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-06-22
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-06-22
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -765,6 +731,7 @@ supervisorctl update  ;修改配置文件后，使用此命令进行更新
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -791,30 +758,30 @@ supervisorctl update  ;修改配置文件后，使用此命令进行更新
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2018/05/10/shi-yong-docker-kuai-su-da-jian-gitlab/">
+                <a href="/2018/06/18/supervisor-de-shi-yong/">
                     <div class="card-image">
                         
-                        <img src="http://res.jxzl.cc/medias/featureimages/32.jpg" class="responsive-img" alt="使用docker快速搭建gitlab">
+                        <img src="http://res.jxzl.cc/medias/featureimages/33.jpg" class="responsive-img" alt="supervisor的使用">
                         
-                        <span class="card-title">使用docker快速搭建gitlab</span>
+                        <span class="card-title">supervisor的使用</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            GitLab 是一个用于仓库管理系统的开源项目，使用Git作为代码管理工具，并在此基础上搭建起来的web服务。
+                            Supervisor是一个客户端/服务器系统，允许其用户在类UNIX操作系统上控制许多进程。简单点来讲，就是一个监控并管理进程的工具，通过它我们可以方便管理各后台进程或守护进程。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-05-10
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-06-18
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Git/" class="post-category" target="_blank">
-                                    Git
+                            <a href="/categories/Supervisor/" class="post-category" target="_blank">
+                                    Supervisor
                                 </a>
                             
                             
@@ -824,16 +791,16 @@ supervisorctl update  ;修改配置文件后，使用此命令进行更新
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Git/" target="_blank">
-                        <span class="chip bg-color">Git</span>
+                    <a href="/tags/Supervisor/" target="_blank">
+                        <span class="chip bg-color">Supervisor</span>
                     </a>
                     
-                    <a href="/tags/docker/" target="_blank">
-                        <span class="chip bg-color">docker</span>
+                    <a href="/tags/进程/" target="_blank">
+                        <span class="chip bg-color">进程</span>
                     </a>
                     
-                    <a href="/tags/gitlab/" target="_blank">
-                        <span class="chip bg-color">gitlab</span>
+                    <a href="/tags/tool/" target="_blank">
+                        <span class="chip bg-color">tool</span>
                     </a>
                     
                 </div>
