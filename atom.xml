@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.klinlin.com/"/>
-  <updated>2019-09-21T02:30:46.430Z</updated>
+  <updated>2019-09-30T08:31:33.664Z</updated>
   <id>https://www.klinlin.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.klinlin.com/2018/06/22/swoole-bian-yi-an-zhuang/"/>
     <id>https://www.klinlin.com/2018/06/22/swoole-bian-yi-an-zhuang/</id>
     <published>2018-06-22T06:03:46.000Z</published>
-    <updated>2019-09-21T02:30:46.430Z</updated>
+    <updated>2019-09-30T08:31:33.664Z</updated>
     
     <summary type="html">
     
@@ -51,7 +51,7 @@
     <link href="https://www.klinlin.com/2018/06/18/supervisor-de-shi-yong/"/>
     <id>https://www.klinlin.com/2018/06/18/supervisor-de-shi-yong/</id>
     <published>2018-06-18T09:02:55.000Z</published>
-    <updated>2019-08-26T09:14:32.308Z</updated>
+    <updated>2019-09-30T08:31:00.407Z</updated>
     
     <summary type="html">
     
@@ -81,7 +81,7 @@
     <link href="https://www.klinlin.com/2018/05/10/shi-yong-docker-kuai-su-da-jian-gitlab/"/>
     <id>https://www.klinlin.com/2018/05/10/shi-yong-docker-kuai-su-da-jian-gitlab/</id>
     <published>2018-05-10T08:30:38.000Z</published>
-    <updated>2019-08-26T09:02:56.709Z</updated>
+    <updated>2019-09-30T08:31:48.874Z</updated>
     
     <summary type="html">
     
@@ -133,9 +133,9 @@
     
       <category term="CentOs" scheme="https://www.klinlin.com/tags/CentOs/"/>
     
-      <category term="Apache" scheme="https://www.klinlin.com/tags/Apache/"/>
-    
       <category term="Mysql" scheme="https://www.klinlin.com/tags/Mysql/"/>
+    
+      <category term="Apache" scheme="https://www.klinlin.com/tags/Apache/"/>
     
   </entry>
   
@@ -144,7 +144,7 @@
     <link href="https://www.klinlin.com/2018/04/12/kuai-su-da-jian-lnmp-huan-jing/"/>
     <id>https://www.klinlin.com/2018/04/12/kuai-su-da-jian-lnmp-huan-jing/</id>
     <published>2018-04-12T08:07:48.000Z</published>
-    <updated>2019-08-05T03:24:18.146Z</updated>
+    <updated>2019-09-30T08:31:53.690Z</updated>
     
     <summary type="html">
     
@@ -166,9 +166,9 @@
     
       <category term="CentOs" scheme="https://www.klinlin.com/tags/CentOs/"/>
     
-      <category term="Mysql" scheme="https://www.klinlin.com/tags/Mysql/"/>
-    
       <category term="Nginx" scheme="https://www.klinlin.com/tags/Nginx/"/>
+    
+      <category term="Mysql" scheme="https://www.klinlin.com/tags/Mysql/"/>
     
   </entry>
   
