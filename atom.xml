@@ -38,9 +38,9 @@
       <category term="Swoole" scheme="https://www.klinlin.com/categories/Swoole/"/>
     
     
-      <category term="进程" scheme="https://www.klinlin.com/tags/%E8%BF%9B%E7%A8%8B/"/>
-    
       <category term="Swoole" scheme="https://www.klinlin.com/tags/Swoole/"/>
+    
+      <category term="进程" scheme="https://www.klinlin.com/tags/%E8%BF%9B%E7%A8%8B/"/>
     
       <category term="扩展" scheme="https://www.klinlin.com/tags/%E6%89%A9%E5%B1%95/"/>
     
@@ -68,9 +68,9 @@
       <category term="Supervisor" scheme="https://www.klinlin.com/categories/Supervisor/"/>
     
     
-      <category term="Supervisor" scheme="https://www.klinlin.com/tags/Supervisor/"/>
-    
       <category term="进程" scheme="https://www.klinlin.com/tags/%E8%BF%9B%E7%A8%8B/"/>
+    
+      <category term="Supervisor" scheme="https://www.klinlin.com/tags/Supervisor/"/>
     
       <category term="tool" scheme="https://www.klinlin.com/tags/tool/"/>
     
@@ -133,9 +133,9 @@
     
       <category term="CentOs" scheme="https://www.klinlin.com/tags/CentOs/"/>
     
-      <category term="Mysql" scheme="https://www.klinlin.com/tags/Mysql/"/>
-    
       <category term="Apache" scheme="https://www.klinlin.com/tags/Apache/"/>
+    
+      <category term="Mysql" scheme="https://www.klinlin.com/tags/Mysql/"/>
     
   </entry>
   
@@ -166,9 +166,9 @@
     
       <category term="CentOs" scheme="https://www.klinlin.com/tags/CentOs/"/>
     
-      <category term="Nginx" scheme="https://www.klinlin.com/tags/Nginx/"/>
-    
       <category term="Mysql" scheme="https://www.klinlin.com/tags/Mysql/"/>
+    
+      <category term="Nginx" scheme="https://www.klinlin.com/tags/Nginx/"/>
     
   </entry>
   

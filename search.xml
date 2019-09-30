@@ -20,9 +20,9 @@
       
         <tags>
             
-            <tag> 进程 </tag>
-            
             <tag> Swoole </tag>
+            
+            <tag> 进程 </tag>
             
             <tag> 扩展 </tag>
             
@@ -49,9 +49,9 @@
       
         <tags>
             
-            <tag> Supervisor </tag>
-            
             <tag> 进程 </tag>
+            
+            <tag> Supervisor </tag>
             
             <tag> tool </tag>
             
@@ -111,9 +111,9 @@
             
             <tag> CentOs </tag>
             
-            <tag> Mysql </tag>
-            
             <tag> Apache </tag>
+            
+            <tag> Mysql </tag>
             
         </tags>
       
@@ -142,9 +142,9 @@
             
             <tag> CentOs </tag>
             
-            <tag> Nginx </tag>
-            
             <tag> Mysql </tag>
+            
+            <tag> Nginx </tag>
             
         </tags>
       
