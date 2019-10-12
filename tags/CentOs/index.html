@@ -272,13 +272,11 @@
     </div>
 </div>
 <script>
-var config='{&#34;title&#34;:&#34;MrKLL&#34;,&#34;subtitle&#34;:&#34;欲戴王冠，必承其重。&#34;,&#34;description&#34;:&#34;MrKLL的技术博客，主要分享PHP、Go、MySQL、JavaScript等技术的相关文章。&#34;,&#34;author&#34;:&#34;MrKLL&#34;,&#34;language&#34;:&#34;zh-CN&#34;,&#34;timezone&#34;:null,&#34;url&#34;:&#34;https://www.klinlin.com&#34;,&#34;root&#34;:&#34;/&#34;,&#34;permalink&#34;:&#34;:year/:month/:day/:title/&#34;,&#34;permalink_defaults&#34;:null,&#34;source_dir&#34;:&#34;source&#34;,&#34;public_dir&#34;:&#34;public&#34;,&#34;tag_dir&#34;:&#34;tags&#34;,&#34;archive_dir&#34;:&#34;archives&#34;,&#34;category_dir&#34;:&#34;categories&#34;,&#34;code_dir&#34;:&#34;downloads/code&#34;,&#34;i18n_dir&#34;:&#34;:lang&#34;,&#34;skip_render&#34;:null,&#34;new_post_name&#34;:&#34;:title.md&#34;,&#34;default_layout&#34;:&#34;post&#34;,&#34;titlecase&#34;:false,&#34;external_link&#34;:true,&#34;filename_case&#34;:0,&#34;render_drafts&#34;:false,&#34;post_asset_folder&#34;:false,&#34;relative_link&#34;:false,&#34;future&#34;:true,&#34;highlight&#34;:{&#34;enable&#34;:false,&#34;auto_detect&#34;:false,&#34;line_number&#34;:true,&#34;tab_replace&#34;:null},&#34;default_category&#34;:&#34;uncategorized&#34;,&#34;category_map&#34;:null,&#34;tag_map&#34;:null,&#34;date_format&#34;:&#34;YYYY-MM-DD&#34;,&#34;time_format&#34;:&#34;HH:mm:ss&#34;,&#34;per_page&#34;:12,&#34;pagination_dir&#34;:&#34;page&#34;,&#34;theme&#34;:&#34;matery&#34;,&#34;deploy&#34;:{&#34;type&#34;:&#34;git&#34;,&#34;repo&#34;:{&#34;github&#34;:&#34;https://github.com/MrKLL/MrKLL.github.io&#34;,&#34;coding&#34;:&#34;https://git.dev.tencent.com/MrKLL/MrKLL.git&#34;},&#34;branch&#34;:&#34;master&#34;},&#34;ignore&#34;:[],&#34;keywords&#34;:&#34;KLL,klinlin,mrkll,Blog,PHP,Go,软件工程师，技术博客,个人博客&#34;,&#34;prism_plugin&#34;:{&#34;mode&#34;:&#34;preprocess&#34;,&#34;theme&#34;:&#34;tomorrow&#34;,&#34;line_number&#34;:false,&#34;custom_css&#34;:null},&#34;index_generator&#34;:{&#34;per_page&#34;:12,&#34;order_by&#34;:&#34;-date&#34;,&#34;path&#34;:&#34;&#34;},&#34;search&#34;:{&#34;path&#34;:&#34;search.xml&#34;,&#34;field&#34;:&#34;post&#34;,&#34;content&#34;:true},&#34;permalink_pinyin&#34;:{&#34;enable&#34;:true,&#34;separator&#34;:&#34;-&#34;},&#34;feed&#34;:{&#34;type&#34;:&#34;atom&#34;,&#34;limit&#34;:20,&#34;hub&#34;:null,&#34;content&#34;:null,&#34;content_limit&#34;:140,&#34;content_limit_delim&#34;:&#34; &#34;,&#34;path&#34;:&#34;atom.xml&#34;,&#34;order_by&#34;:&#34;-date&#34;},&#34;archive_generator&#34;:{&#34;per_page&#34;:12,&#34;yearly&#34;:true,&#34;monthly&#34;:true,&#34;daily&#34;:false},&#34;category_generator&#34;:{&#34;per_page&#34;:12},&#34;tag_generator&#34;:{&#34;per_page&#34;:12},&#34;marked&#34;:{&#34;gfm&#34;:true,&#34;pedantic&#34;:false,&#34;sanitize&#34;:false,&#34;tables&#34;:true,&#34;breaks&#34;:true,&#34;smartLists&#34;:true,&#34;smartypants&#34;:true,&#34;modifyAnchors&#34;:&#34;&#34;,&#34;autolink&#34;:true},&#34;server&#34;:{&#34;port&#34;:4000,&#34;log&#34;:false,&#34;compress&#34;:false,&#34;header&#34;:true}}';
-console.log(config);
 // 每天切换 banner 图.  Switch banner image every day.
 //$('.bg-cover').css('background-image', 'url(http://res.jxzl.cc/medias/banaer/' + new Date().getDay() + '.jpg)');
 //随机切换banner图
 $('.bg-cover').css('background-image', 'url(http://res.jxzl.cc/medias/banaer/' + getNum(0,6) + '.jpg)');
-//$('.bg-cover').css('background-image', 'url(http://res.jxzl.cc/medias/banaer/3.jpg');
+//$('.bg-cover').css('background-image', 'url(/medias/banner/41.jpg)');
 //随机获取两个整数之间的整数
     function getNum(start,end)
     {
@@ -301,9 +299,57 @@ $('.bg-cover').css('background-image', 'url(http://res.jxzl.cc/medias/banaer/' +
             <div class="tag-chips">
                 
                 
+                <a href="/tags/框架/" title="框架: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default " data-tagname="框架" style="background-color: #F9EBEA;">框架
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Laravel/" title="Laravel: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default " data-tagname="Laravel" style="background-color: #F5EEF8;">Laravel
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Composer/" title="Composer: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default " data-tagname="Composer" style="background-color: #D5F5E3;">Composer
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/PHP/" title="PHP: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default " data-tagname="PHP" style="background-color: #E8F8F5;">PHP
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/扩展管理/" title="扩展管理: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default " data-tagname="扩展管理" style="background-color: #FEF9E7;">扩展管理
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/工具/" title="工具: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default " data-tagname="工具" style="background-color: #F8F9F9;">工具
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
                 <a href="/tags/Swoole/" title="Swoole: 1">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default " data-tagname="Swoole" style="background-color: #F9EBEA;">Swoole
+                             chip-default " data-tagname="Swoole" style="background-color: #82E0AA;">Swoole
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -311,7 +357,7 @@ $('.bg-cover').css('background-image', 'url(http://res.jxzl.cc/medias/banaer/' +
                 
                 <a href="/tags/进程/" title="进程: 2">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default " data-tagname="进程" style="background-color: #F5EEF8;">进程
+                             chip-default " data-tagname="进程" style="background-color: #D7BDE2;">进程
                         <span class="tag-length">2</span>
                     </span>
                 </a>
@@ -319,7 +365,7 @@ $('.bg-cover').css('background-image', 'url(http://res.jxzl.cc/medias/banaer/' +
                 
                 <a href="/tags/扩展/" title="扩展: 1">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default " data-tagname="扩展" style="background-color: #D5F5E3;">扩展
+                             chip-default " data-tagname="扩展" style="background-color: #A3E4D7;">扩展
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -327,7 +373,7 @@ $('.bg-cover').css('background-image', 'url(http://res.jxzl.cc/medias/banaer/' +
                 
                 <a href="/tags/Supervisor/" title="Supervisor: 1">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default " data-tagname="Supervisor" style="background-color: #E8F8F5;">Supervisor
+                             chip-default " data-tagname="Supervisor" style="background-color: #85C1E9;">Supervisor
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -335,8 +381,24 @@ $('.bg-cover').css('background-image', 'url(http://res.jxzl.cc/medias/banaer/' +
                 
                 <a href="/tags/tool/" title="tool: 1">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default " data-tagname="tool" style="background-color: #FEF9E7;">tool
+                             chip-default " data-tagname="tool" style="background-color: #F8C471;">tool
                         <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/版本控制工具/" title="版本控制工具: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default " data-tagname="版本控制工具" style="background-color: #F9E79F;">版本控制工具
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Git/" title="Git: 2">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default " data-tagname="Git" style="background-color: #F9E79F;">Git
+                        <span class="tag-length">2</span>
                     </span>
                 </a>
                 
@@ -349,17 +411,9 @@ $('.bg-cover').css('background-image', 'url(http://res.jxzl.cc/medias/banaer/' +
                 </a>
                 
                 
-                <a href="/tags/Git/" title="Git: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default " data-tagname="Git" style="background-color: #82E0AA;">Git
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/tags/gitlab/" title="gitlab: 1">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default " data-tagname="gitlab" style="background-color: #D7BDE2;">gitlab
+                             chip-default " data-tagname="gitlab" style="background-color: #F5EEF8;">gitlab
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -367,7 +421,7 @@ $('.bg-cover').css('background-image', 'url(http://res.jxzl.cc/medias/banaer/' +
                 
                 <a href="/tags/代码编辑器/" title="代码编辑器: 1">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default " data-tagname="代码编辑器" style="background-color: #A3E4D7;">代码编辑器
+                             chip-default " data-tagname="代码编辑器" style="background-color: #F5EEF8;">代码编辑器
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -375,7 +429,7 @@ $('.bg-cover').css('background-image', 'url(http://res.jxzl.cc/medias/banaer/' +
                 
                 <a href="/tags/Webstorm/" title="Webstorm: 1">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default " data-tagname="Webstorm" style="background-color: #85C1E9;">Webstorm
+                             chip-default " data-tagname="Webstorm" style="background-color: #82E0AA;">Webstorm
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -383,7 +437,7 @@ $('.bg-cover').css('background-image', 'url(http://res.jxzl.cc/medias/banaer/' +
                 
                 <a href="/tags/Linux/" title="Linux: 2">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default " data-tagname="Linux" style="background-color: #F8C471;">Linux
+                             chip-default " data-tagname="Linux" style="background-color: #E8F8F5;">Linux
                         <span class="tag-length">2</span>
                     </span>
                 </a>
@@ -391,23 +445,7 @@ $('.bg-cover').css('background-image', 'url(http://res.jxzl.cc/medias/banaer/' +
                 
                 <a href="/tags/CentOs/" title="CentOs: 2">
                     <span class="chip center-align waves-effect waves-light
-                             chip-active " data-tagname="CentOs" style="background-color: #F9E79F;">CentOs
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Apache/" title="Apache: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default " data-tagname="Apache" style="background-color: #82E0AA;">Apache
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Mysql/" title="Mysql: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default " data-tagname="Mysql" style="background-color: #FEF9E7;">Mysql
+                             chip-active " data-tagname="CentOs" style="background-color: #D7BDE2;">CentOs
                         <span class="tag-length">2</span>
                     </span>
                 </a>
@@ -421,25 +459,17 @@ $('.bg-cover').css('background-image', 'url(http://res.jxzl.cc/medias/banaer/' +
                 </a>
                 
                 
-                <a href="/tags/框架/" title="框架: 1">
+                <a href="/tags/Mysql/" title="Mysql: 2">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default " data-tagname="框架" style="background-color: #E8F8F5;">框架
-                        <span class="tag-length">1</span>
+                             chip-default " data-tagname="Mysql" style="background-color: #FEF9E7;">Mysql
+                        <span class="tag-length">2</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/Laravel/" title="Laravel: 1">
+                <a href="/tags/Apache/" title="Apache: 1">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default " data-tagname="Laravel" style="background-color: #FFF;">Laravel
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/版本控制工具/" title="版本控制工具: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default " data-tagname="版本控制工具" style="background-color: #F8C471;">版本控制工具
+                             chip-default " data-tagname="Apache" style="background-color: #82E0AA;">Apache
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -455,7 +485,7 @@ $('.bg-cover').css('background-image', 'url(http://res.jxzl.cc/medias/banaer/' +
         <div class="row tags-posts">
             
             
-            <div class="article tag-post col s12 m6 l4" data-tags="Linux, CentOs, Apache, Mysql" data-aos="fade-up">
+            <div class="article tag-post col s12 m6 l4" data-tags="Linux, CentOs, Mysql, Apache" data-aos="fade-up">
                 <div class="card">
                     <a href="/2018/04/12/kuai-su-da-jian-lamp-huan-jing/">
                         <div class="card-image tag-image">
@@ -486,7 +516,7 @@ $('.bg-cover').css('background-image', 'url(http://res.jxzl.cc/medias/banaer/' +
             </div>
             
             
-            <div class="article tag-post col s12 m6 l4" data-tags="Linux, CentOs, Mysql, Nginx" data-aos="fade-up">
+            <div class="article tag-post col s12 m6 l4" data-tags="Linux, CentOs, Nginx, Mysql" data-aos="fade-up">
                 <div class="card">
                     <a href="/2018/04/12/kuai-su-da-jian-lnmp-huan-jing/">
                         <div class="card-image tag-image">
@@ -530,7 +560,7 @@ $('.bg-cover').css('background-image', 'url(http://res.jxzl.cc/medias/banaer/' +
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">9.2k</span>
+                <span class="white-color">10.1k</span>
             
 
             
