@@ -71,9 +71,9 @@
       <category term="Swoole" scheme="https://www.klinlin.com/categories/Swoole/"/>
     
     
-      <category term="Swoole" scheme="https://www.klinlin.com/tags/Swoole/"/>
-    
       <category term="进程" scheme="https://www.klinlin.com/tags/%E8%BF%9B%E7%A8%8B/"/>
+    
+      <category term="Swoole" scheme="https://www.klinlin.com/tags/Swoole/"/>
     
       <category term="扩展" scheme="https://www.klinlin.com/tags/%E6%89%A9%E5%B1%95/"/>
     
@@ -101,9 +101,9 @@
       <category term="Supervisor" scheme="https://www.klinlin.com/categories/Supervisor/"/>
     
     
-      <category term="进程" scheme="https://www.klinlin.com/tags/%E8%BF%9B%E7%A8%8B/"/>
-    
       <category term="Supervisor" scheme="https://www.klinlin.com/tags/Supervisor/"/>
+    
+      <category term="进程" scheme="https://www.klinlin.com/tags/%E8%BF%9B%E7%A8%8B/"/>
     
       <category term="tool" scheme="https://www.klinlin.com/tags/tool/"/>
     
@@ -177,7 +177,7 @@
     <link href="https://www.klinlin.com/2018/04/12/kuai-su-da-jian-lnmp-huan-jing/"/>
     <id>https://www.klinlin.com/2018/04/12/kuai-su-da-jian-lnmp-huan-jing/</id>
     <published>2018-04-12T08:07:48.000Z</published>
-    <updated>2019-09-30T08:31:53.690Z</updated>
+    <updated>2019-10-18T02:41:09.989Z</updated>
     
     <summary type="html">
     
