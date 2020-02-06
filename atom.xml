@@ -166,9 +166,9 @@
     
       <category term="CentOs" scheme="https://www.klinlin.com/tags/CentOs/"/>
     
-      <category term="Apache" scheme="https://www.klinlin.com/tags/Apache/"/>
-    
       <category term="Mysql" scheme="https://www.klinlin.com/tags/Mysql/"/>
+    
+      <category term="Apache" scheme="https://www.klinlin.com/tags/Apache/"/>
     
   </entry>
   
@@ -199,9 +199,9 @@
     
       <category term="CentOs" scheme="https://www.klinlin.com/tags/CentOs/"/>
     
-      <category term="Mysql" scheme="https://www.klinlin.com/tags/Mysql/"/>
-    
       <category term="Nginx" scheme="https://www.klinlin.com/tags/Nginx/"/>
+    
+      <category term="Mysql" scheme="https://www.klinlin.com/tags/Mysql/"/>
     
   </entry>
   
