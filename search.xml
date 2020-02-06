@@ -109,9 +109,9 @@
       
         <tags>
             
-            <tag> docker </tag>
-            
             <tag> Git </tag>
+            
+            <tag> docker </tag>
             
             <tag> gitlab </tag>
             
@@ -227,9 +227,9 @@
       
         <tags>
             
-            <tag> Git </tag>
-            
             <tag> 版本控制工具 </tag>
+            
+            <tag> Git </tag>
             
         </tags>
       
