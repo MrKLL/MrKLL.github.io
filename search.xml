@@ -51,9 +51,9 @@
       
         <tags>
             
-            <tag> Swoole </tag>
-            
             <tag> 进程 </tag>
+            
+            <tag> Swoole </tag>
             
             <tag> 扩展 </tag>
             
@@ -80,9 +80,9 @@
       
         <tags>
             
-            <tag> 进程 </tag>
-            
             <tag> Supervisor </tag>
+            
+            <tag> 进程 </tag>
             
             <tag> tool </tag>
             
@@ -109,9 +109,9 @@
       
         <tags>
             
-            <tag> Git </tag>
-            
             <tag> docker </tag>
+            
+            <tag> Git </tag>
             
             <tag> gitlab </tag>
             
@@ -227,9 +227,9 @@
       
         <tags>
             
-            <tag> 版本控制工具 </tag>
-            
             <tag> Git </tag>
+            
+            <tag> 版本控制工具 </tag>
             
         </tags>
       
